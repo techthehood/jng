@@ -1,0 +1,38 @@
+$mp: !important;
+
+.contact-us{
+  font-size: 1.5rem;
+  background-color: var(--main-bg);
+  i{color: var(--main-color);}
+  .contact-right{ background-color: var(--main-color);}
+  .contact-details{color: #fff; border-top-color: var(--off-main-color) $mp; border-bottom-color: var(--off-main-color) $mp;}
+  .location-title{
+    text-align: center;
+    font-weight: 600;
+    color: #fff;
+  }
+  .contact-title1{
+    display: flex;
+  }
+  .contact-title{
+    text-align: center;
+  }
+  .contact-sub{
+    text-align: center;
+    font-weight: 600;
+  }
+  .address{
+    display: flex;
+    gap: 0.25rem;
+    color: #fff;
+    font-size: .9rem;
+  }
+  hr{border-top: 1px solid var(--off-main-color);}
+  .register-now-btn{ 
+    padding: 0.5rem 1rem $mp; 
+    color: var(--main-color) $mp; 
+    text-transform: capitalize $mp;
+    &:hover{color: white $mp;}
+  }
+  .submit{color: var(--main-color);}
+}

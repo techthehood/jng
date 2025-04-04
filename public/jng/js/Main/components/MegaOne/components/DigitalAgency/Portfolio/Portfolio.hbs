@@ -1,0 +1,35 @@
+<!--portfolio section start-->
+  <section class="portfolio-sec company-portfolio-section padding-top" id="company-portfolio-section"  data-comp="Portfolio">
+    <div class="container">
+      <div class="section-heading">
+        <div class="row">
+          <div class="col-md-6 wow fadeInUp text-center text-lg-left portfolio-title" data-wow-delay="300ms">
+            <h1 class="heading">OUR</h1>
+            <h1 class="heading">AMAZING PORTFOLIO</h1>
+          </div>
+          <div class="col-md-12 pt-5">
+            <div id="js-filters-mosaic" class="cbp-l-filters-button wow fadeInUp text-center text-md-left portfolio-btns"
+              data-wow-delay="350ms">
+              {{#each topics}}
+                {{#if active}}
+                  {{#if home}}
+                      <div data-filter="{{filter}}" class="cbp-filter-item-active cbp-filter-item"> {{label}}</div>
+                    {{else}}
+                      <div data-filter="{{filter}}" class="cbp-filter-item"> {{label}}</div>
+                  {{/if}}
+                {{/if}}
+              {{/each}}
+            </div>
+
+            <div id="js-grid-mosaic" class="cbp cbp-l-grid-mosaic portfolio-js-grid-mosaic"></div>
+
+            <div class="col-12 d-flex justify-content-end align-items-center portfolio-load-more-cont" style="">
+              <div class="portfolio-load-more-btn btn blue-and-black-btn rounded-pill">LOAD MORE</div>
+            </div>
+          
+
+        </div>
+      </div>
+    </div>
+  </section>
+<!--portfolio section end-->

@@ -1,0 +1,16 @@
+<!--brands section start-->
+<section class="brand-sec" id="brand" data-comp="Brands">
+    <div class="container">
+        <div class="brand-details pr-lg-5">
+            <h6 class="sub-title main-color">{{h6}}</h6>
+            <h2 class="title">{{h2}}</h2>
+          </div>
+        <!--Partner Slider-->
+        <div class="partners-slider owl-carousel owl-theme">
+          {{#each clients}}
+            <div class="logo-item"> <img alt="client-logo" src="{{src}}"></div>
+          {{/each}}
+        </div>
+    </div>
+</section>
+<!--brands section end-->

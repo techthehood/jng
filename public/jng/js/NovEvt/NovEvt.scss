@@ -1,0 +1,39 @@
+$mp: !important;
+$hov: 10000;
+
+:root {
+  --main-color: #f25421;
+  --main-text-color: #fff;
+  --off-main-color: #f68864;
+  --white: #fff;
+  --grey: #9e9e9e;
+  --main-color: #7b9c41;//#2e8538;
+  --off-main-color: #79d36f;// #fffbcc
+  --main-bg: #fffbcc;//#f0f4c3;
+  --sunzao: #ffeb3b;
+  --active-blue: #2d2dad;
+  --disabled-grey: #9e9e9e;
+}
+
+.cancelBtn{
+  background-image: linear-gradient(to bottom, #f9fff8, #AAADAA) !important;
+}
+
+.register_view_modal_cont, .biolist_view_modal_cont {
+  z-index: $hov $mp;
+}
+.qrc_view_modal_cont {
+  z-index: $hov + 10 $mp;
+}
+
+.jng-mobile{padding: unset !important; margin:unset !important;}
+
+@media(max-width: 650px){
+      .jng-mobile{display: none;}
+}// @media
+
+
+@import "../scss/flicker";
+@import "../scss/fade";
+@import "../scss/icons";
+@import "../scss/app";

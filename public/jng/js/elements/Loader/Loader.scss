@@ -1,0 +1,18 @@
+
+
+$mp: !important;
+
+.Loader{
+
+  .loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 11111111;
+    background: #FFFFFF;
+  }
+  .hide{display: none $mp;}
+}
+//IMPORTANT: loader css has to be available b4 the elements display on the screen to eliminate
+// showing unstyled elements

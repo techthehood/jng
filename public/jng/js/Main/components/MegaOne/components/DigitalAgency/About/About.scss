@@ -1,0 +1,23 @@
+@use '../../../lib/scss/media';
+// @include media.tablet {
+//   /*xxl desktop tablet mobile*/
+// }
+
+$mp: !important;
+
+.About{
+  #about-header-svg{z-index: 0;}
+  .about-sec{ 
+    img{
+      @include media.tablet {
+        bottom: -198px;
+      }
+      @include media.laptop {
+        bottom: -257px;
+      }
+      @include media.desktop {
+        bottom: -100px;
+      }
+    }
+  }
+}

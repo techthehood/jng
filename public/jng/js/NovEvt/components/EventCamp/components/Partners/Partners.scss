@@ -1,0 +1,11 @@
+$mp: !important;
+
+.sponsors{
+  font-size: 1.5rem;
+  h2{color: var(--main-color) $mp;}
+  .styles-button{
+    cursor: pointer;
+    color: var(--main-color) $mp;
+    i{color: var(--main-color) $mp;}
+  }
+}

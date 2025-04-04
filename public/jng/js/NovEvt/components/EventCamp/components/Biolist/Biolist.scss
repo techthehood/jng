@@ -1,0 +1,17 @@
+$mp: !important;
+
+.biolist_view_modal_cont {
+    padding-top: 1rem $mp;
+    .biolist_view_modal {
+      margin-top: 1rem !important;
+      max-width: 50rem !important;
+      max-height: 90vh !important;
+      .biolist_view_content {
+        max-height: 83vh;
+        overscroll-behavior: contain;
+      }// biolist_view_content
+      .pTree_profile{ gap: .5rem;}
+      img.pTree_icon_img_ImgImage {object-fit: contain; width: 14rem $mp; height: unset $mp;}
+    }// biolist_view_modal
+  }// biolist_view_modal_cont
+  .qr_visit{ border: 1px solid #ccc; border-radius: 7px;}

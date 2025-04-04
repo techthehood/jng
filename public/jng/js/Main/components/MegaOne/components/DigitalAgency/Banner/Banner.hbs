@@ -1,0 +1,55 @@
+<div class="banner parallax"  data-comp="Banner">
+  {{!-- video was here --}}
+  <div class="container-fluid">
+    <div class="content-row row banner-row">
+      {{#if video.active}}
+      <video autoplay muted loop id="myVideo">
+        <source src="{{video.src}}" type="video/mp4">
+      </video>
+      {{/if}}
+      <div
+        class="content-inner col-12 col-lg-7 d-flex justify-content-center justify-content-lg-end align-items-center text-center text-lg-right">
+        {{#if title.active}}
+          <div class="banner-text-left wow fadeInLeft" data-depth="0.1">
+            <h1>{{title.h1}}</h1>
+            <p>{{title.p}}</p>
+          </div>
+        {{/if}}
+      </div>
+      {{#if announcement.active}}
+        <div class="col-12 col-lg-5 d-flex align-items-center">
+          {{#if announcement.flyer.active}}
+            <div class="banner-text-right wow fadeInRight flyer" data-depth="0.1">
+          {{else}}
+              <div class="banner-text-right wow fadeInRight" data-depth="0.1">
+          {{/if}}
+          {{#if announcement.flyer.active}}
+            <div class="fly-box">
+              <img src="{{announcement.flyer.img}}">
+              {{#if announcement.flyer.active_btn}}
+              <a href="javascript:void(0);" class="fly-btn btn btn-large btn-rounded white-tran-black-btn">{{announcement.flyer.button}}</a>
+              {{/if}}
+            </div>
+          {{else}}
+            <div class="overlay-yellow-box"></div>
+          {{/if}}
+            {{#if announcement.text.active}}
+              <div class="banner-right-area-content">
+                <h2>{{announcement.text.h2_a}}<span class="main-bold-text"> {{announcement.text.h2_b}}</span></h2>
+                <p>{{announcement.text.p}}</p>
+                {{#if announcement.text.active_btn}}
+                  <a href="javascript:void(0);" class="btn btn-large btn-rounded white-tran-black-btn">{{announcement.text.button}}</a>
+                {{/if}}
+              </div>
+            {{/if}}
+          </div>
+        </div>
+      {{/if}}
+    </div>
+  </div>
+  <svg id="banner_svg" class="separator__svg" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
+    fill="#ffffff" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <path d="M 100 100 V 10 L 0 100" />
+    <path d="M 30 73 L 100 18 V 10 Z" fill="#ffffff" stroke-width="0" />
+  </svg>
+</div>

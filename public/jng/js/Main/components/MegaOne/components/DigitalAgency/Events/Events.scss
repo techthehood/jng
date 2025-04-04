@@ -1,0 +1,72 @@
+@use '../../../lib/scss/media';
+$mp: !important;
+// @include media.tablet {
+//   bottom: -198px;
+// }
+// @include media.laptop {
+//   bottom: -257px;
+// }
+// @include media.desktop {
+//   bottom: -100px;
+// }
+.Events{
+  #blog-circle-left{left: -1rem;}
+  .lastest-blog{
+    @mixin small {padding-top: 122px;}
+    @include media.mobile{ @include small; }
+    @include media.mini{ @include small; }
+    @include media.tablet{padding-top: 200px;}
+    .blog-img{
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+    }
+    .container{
+      padding-top: 7rem;
+      &:first-of-type{padding-top: unset;}
+    }
+    .btn2{margin-top: 1rem;}
+  }
+  .blog-content{
+    p{color: #000;}
+  }
+  .slider-slide{
+    padding-left: 1rem;
+  }
+  .slider-img{
+    transform: translate(-50%, -10%) $mp;
+    @mixin small {
+      position: relative $mp;
+      left: unset $mp;
+      top: unset $mp;
+      transform: unset $mp;
+    }
+    @include media.mobile{ @include small; }
+    @include media.mini{ @include small; }
+    @include media.tablet{position: absolute;}
+  }
+  h5{
+    // color: var(--main-secondary-color);
+    color: #3013c8;//#6c757d;//#ccc;
+    &.sub2{color: #c81313;}
+    &.sub3{color: #146411;}
+  }
+  a {background: #000;}
+  .lastest-blog{ 
+    background-color: var(--main-secondary-color);
+    .blog-img{ 
+      img{width: 99%;}
+    }
+  }
+  .custom_head{ color: var(--main-site-color); font-size: 2rem;}
+  .custom_cont.summit{
+    .summit.inner{
+      padding: 0 .5rem;
+      .summit.list{
+        color: white;
+        list-style-position: outside;/*WORKS indents the second line of its nested li(s)*/
+        text-align: justify;
+      }
+    }
+  }
+}

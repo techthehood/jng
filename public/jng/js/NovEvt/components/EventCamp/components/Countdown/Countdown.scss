@@ -1,0 +1,36 @@
+@use '../../lib/scss/media';
+$mp: !important;
+
+.root{
+  .conference{
+    font-size: 1.5rem;
+    h2{ padding: 0 2rem; font-size: 60px $mp;}
+    .row{color: black;}
+    background-color: var(--main-color);
+    .register-now-btn {
+      color: var(--main-color);
+      &:hover{
+        color: var(--white);
+        i {
+          color: var(--white);
+        }
+      }
+      i {
+        color: var(--main-color);
+      }
+    }
+    .count-down{ 
+      .count-day{ 
+        .count-number {
+          border-bottom: 1px solid var(--off-main-color);
+        }
+        border-right: 1px solid var(--off-main-color);
+      }
+      .count-down-address{
+        padding: 0 80px;
+        @include media.desktop{ padding: 0 55px;}
+        @include media.mobile{ padding: 0 30px; }
+      }
+    }
+  }// conference
+}// root

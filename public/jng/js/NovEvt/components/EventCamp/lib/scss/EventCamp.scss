@@ -1,0 +1,30 @@
+$mp: !important;
+
+.bottom-social{ 
+  background-color: #000;
+  a:hover{color: var(--main-color) $mp;}
+}
+.footer-top {background: var(--main-color);}
+.footer-bottom {
+  background: #000;
+  color: var(--main-color);
+}
+.footer-bottom a {
+  color: var(--sunzao);
+  &:active, &:hover{color: #7f28c1;}
+}
+.footer-right {padding-top: unset $mp;}
+
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover,
+.navbar-default.main-menu .navbar-nav .navbar-nav>li>a:hover,
+.navbar-default.main-menu .navbar-nav>li:active>a,
+.navbar-default.main-menu .navbar-nav>li>a:active,
+.navbar-default.main-menu .navbar-nav>li>a:focus {
+  color: var(--main-color) $mp;//#f25421 !important;
+  background: transparent !important;
+}
+
+#back-to-top {background: var(--main-color) $mp;}

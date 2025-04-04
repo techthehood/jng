@@ -1,0 +1,16 @@
+@use '../../../lib/scss/media';
+$mp:  !important;
+
+.Slant{
+  position: relative;
+  min-height: 550px;
+  // background: #000;
+  .slant_cont{
+    
+    @mixin small {padding-top: 5rem;}
+    @include media.mobile{ @include small; }
+    @include media.mini{ @include small; }
+    @include media.tablet{padding-top: 2rem;}
+    @include media.laptop{padding-top: 0rem;}
+  }
+}

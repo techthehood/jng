@@ -1,0 +1,55 @@
+{{#if video.active}}
+<video autoplay muted loop id="myVideo">
+  <source src="{{video.src}}" type="video/mp4">
+</video>
+{{/if}}
+{{#if image.active}}
+  <div class="hero-image" style="background-image: url({{image.src}})">
+    {{!-- <img src="{{image.src}}" /> --}}
+  </div>
+{{/if}}
+<div
+  class="content-inner {{title_class}} d-flex justify-content-center justify-content-lg-end align-items-center text-center text-lg-right">
+  {{#if title.active}}
+    <div class="banner-text-left wow fadeInLeft {{title.class}}" data-depth="0.1">
+      <h1>{{title.h1}}</h1>
+      <p>{{title.p}}</p>
+      {{#if title.active_btn}}
+      <a href="javascript:void(0);" class="fly-btn btn btn-large btn-rounded white-tran-black-btn">{{title.button}}</a>
+      {{/if}}
+    </div>
+  {{/if}}
+</div>
+{{#if promo.active}}
+<div class="{{promo_class}} d-flex align-items-center">
+  {{#if promo.flyer.active}}
+  <div class="banner-text-right wow fadeInRight flyer {{promo.flyer.class}}" data-depth="0.1">
+    {{else}}
+    <div class="banner-text-right wow fadeInRight" data-depth="0.1">
+      {{/if}}
+      {{#if promo.flyer.active}}
+      <div class="fly-box">
+        {{!-- <img src="{{promo.flyer.img}}"> --}}
+        <div class="fly-img" style="background-image: url({{promo.flyer.img}})"></div>
+        {{#if promo.flyer.active_btn}}
+        <a href="javascript:void(0);"
+          class="fly-btn btn btn-large btn-rounded white-tran-black-btn">{{promo.flyer.button}}</a>
+        {{/if}}
+      </div>
+      {{else}}
+      <div class="overlay-yellow-box"></div>
+      {{/if}}
+      {{#if promo.text.active}}
+      <div class="banner-right-area-content">
+        <h2>{{promo.text.h2_a}}<span class="main-bold-text"> {{promo.text.h2_b}}</span></h2>
+        <p>{{promo.text.p}}</p>
+        {{#if promo.text.active_btn}}
+        <a href="javascript:void(0);"
+          class="btn btn-large btn-rounded white-tran-black-btn">{{promo.text.button}}</a>
+        {{/if}}
+      </div>
+      {{/if}}
+    </div>
+  </div>
+  {{/if}}
+</div>

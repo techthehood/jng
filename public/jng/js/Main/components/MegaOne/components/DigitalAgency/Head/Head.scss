@@ -1,0 +1,121 @@
+  @use '../../../lib/scss/media';
+  $mp: !important;
+
+  .Head, .BigHead {
+    .navbar-brand {
+      padding: 10px $mp;
+  
+      img {
+        max-width: 138px $mp;
+      }
+    }
+    .side-menu{
+      .navbar-brand {
+        margin-top: 50px;
+        padding: 10px $mp;
+      
+        img {
+          max-width: 400px $mp;
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .BigHead{
+    z-index: 1121;
+    position: relative;
+    #home{
+      border-bottom: 1px solid white; 
+      background-color: rgb(0 0 0 / 29%);
+      padding: unset $mp;
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 1;
+      // backdrop-filter: blur(3px);// this breaks the side-menu
+      .container{
+        backdrop-filter: blur(3px);// fix for side menu break
+      }
+    }
+    .navbar-brand, .navbar{background-color: transparent $mp;}
+    .nav-link{color: white $mp;}
+    #navbarNavDropdown{
+      justify-content: center;
+      .navbar-nav{margin-left: unset $mp;}
+    }
+
+    .dropbtn {
+      // background-color: #4CAF50;
+      // color: white;
+      // padding: 16px;
+      // font-size: 16px;
+      // border: none;
+      // cursor: pointer;
+    }
+
+    /* The container <div> - needed to position the dropdown content */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1
+    }
+
+    /* Show the dropdown menu on hover */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    .dropdown:hover .dropbtn {
+      // background-color: #3e8e41;
+      color: var(--main-site-color) $mp;
+    }
+  }
+
+  @mixin b-title{
+    .banner-title {
+      h1{@content;}
+    }
+  }
+
+  @mixin hamburger{
+    .drawer-hamburger-icon{
+      &:after, &:before{@content;}
+      background-color: var(--main-color);
+    }
+  }// hamburger
+
+  @include media.desktop{
+    @include b-title{
+      font-size: 40px $mp;
+    }
+  }
+
+  @include media.tablet{
+    @include b-title{
+      font-size: 32px $mp;
+    }
+  }

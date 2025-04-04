@@ -1,0 +1,232 @@
+// @use '../../../scss/media';
+@use '../../media';
+$mp: !important;
+
+.Events-Feat{
+  .feat_container{
+    width: 100%;
+    @mixin small{
+      display: block;
+      height: unset;// i need this to keep the coundown from riding up
+      object-fit: cover;
+    }
+    @include media.smartphone {
+      @include small;
+    }
+    @include media.mini {
+      @include small;
+    }
+    @include media.tablet{
+      height: 400px;
+      display: grid;
+      grid-template-areas: "text img";
+      grid-template-columns: 1fr 1fr;
+    }
+    .feat_text_cont{
+      width: 100%;
+      display: flex;
+      flex-flow: column;
+      gap: 2rem;
+      // padding: 3rem;
+      @mixin small {padding: 30% 8% 8%;}
+      @include media.smartphone{ @include small; }
+      // @include media.mini{ @include small; }
+      @include media.mini{padding: 22% 8% 8%;}
+      @include media.laptop{padding: 18% 8% 8%;}
+      color: white;
+      grid-area: text;
+      z-index: 1;
+      h1{
+        color: white;
+        font-size: 2rem;
+      }
+      h3{
+        color: var(--main-secondary-color);
+      }
+      @mixin small {
+        position: absolute;
+        text-align: center;
+        gap: 1rem;
+        h1{
+          // font-size: 54%;
+        }
+        h3{
+          font-size: 1.2rem;
+        }
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.tablet {
+        position: relative;
+        text-align: right;
+        gap: 4%;
+        h1{
+          // font-size: 3rem;
+          font-size: 2rem;
+        }
+        h3{
+          font-size: 1.5rem;
+        }
+      }
+      @include media.desktop {
+        h1{ font-size: 2.5rem;}
+        h3{font-size: 1.7rem; }
+      }
+      .nav_btns{
+        display: flex;
+        width: 100%;
+        // gap: 2rem;
+        @mixin small {
+          a{font-size: .8rem;}
+          justify-content: center;
+          gap: 1rem;
+        }
+        @include media.mini {
+          @include small;
+        }
+        @include media.smartphone {
+          @include small;
+        }
+        @include media.tablet {
+          justify-content: flex-end;
+          gap: 8%;
+          a{font-size: 1rem;}
+        }
+        a {
+          // font-size: 1.5rem;
+          padding: 1% 4%;
+          // padding: 1.25rem;
+          font-weight: bold;
+          border: 3px solid;
+          border-radius: 1.5rem;
+          &.learn{
+            color: var(--main-site-color);
+            border-color: var(--main-secondary-color);
+          }
+          &.register{
+            color: var(--main-secondary-color);
+            border-color: var(--main-site-color);
+          }
+        }// a
+      }// nav_btns
+    }// feat_text_cont
+    .feat_img_cont{
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      @mixin small {
+        position: relative;
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.tablet {
+        position: absolute;
+      }
+
+      .dad_job{
+        -webkit-clip-path: url(#featMask);
+        clip-path: url(#featMask);
+        @mixin small{
+          height: 430px;
+          object-fit: cover;
+        }
+        @include media.mini {
+          @include small;
+        }
+        @include media.smartphone {
+          @include small;
+        }
+        @include media.tablet {
+          height: unset;
+        }
+      }// dad_job
+    }// feat_img_cont
+    .path{
+      // transform:scale(.6) translate(-70, -130);
+      @mixin small{
+        transform: translate(-36%, -56%);
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.tablet {
+        transform: translate(-29%, -67%);
+      }
+      @include media.laptop {
+        transform: translate(-23%, -57%);
+      }
+      @include media.desktop {
+        transform: translate(-17%, -47%);
+      }
+      @include media.xxl {
+        transform: translate(-9%, -33%);
+      }
+    }// path
+    .date-saver{
+      // position: absolute;
+      grid-area: img;
+      z-index: 1;
+      @mixin small{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 185px;
+        width: 100%;
+        padding: 0 3rem;
+        margin-top: -4rem;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.tablet {
+        display: flex;
+        justify-content: center;
+        padding: 4rem 1rem 1rem;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 77%;
+        margin-top: unset;
+      }
+      @include media.laptop {
+        height: unset;
+        padding: 5rem 3rem 3rem;
+      }
+      
+      img{
+        filter: drop-shadow(2px 4px 6px #6c757d);
+        @mixin small{
+          width: 80%;
+        }
+        @include media.smartphone {
+          @include small;
+        }
+        @include media.mini {
+          @include small;
+        }
+        @include media.tablet {
+          width: 30vw;
+          object-fit: contain;
+        }
+        @include media.laptop {
+          width: 25vw;
+        }
+      }// img
+    }// date-saver
+    svg{position: absolute;}
+  }// .feat_container
+}// .Events-Feat

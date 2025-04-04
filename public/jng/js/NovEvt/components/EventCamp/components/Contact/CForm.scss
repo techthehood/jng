@@ -1,0 +1,43 @@
+
+
+  // .cForm_cont
+  .form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    height: 100%;
+    padding: 2rem 0;
+    // }
+
+    .contact-form{
+      width: 75%;
+      // position: absolute;
+      // top: 10%;
+      // left: 10%;
+      // width: 80%;
+      // height: 600px;
+    }
+
+    input, textarea{
+      width: 100%;
+      margin-top: 2rem;
+      border: none;
+      border-bottom: 1px solid black;
+      color: black;
+    }
+
+    .submit{
+      border: 1px solid black;
+      padding: 1rem;
+      text-align: center;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .submit:hover{
+      opacity: .6;
+    }
+  }

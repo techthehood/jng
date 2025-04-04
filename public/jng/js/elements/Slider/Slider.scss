@@ -1,0 +1,9 @@
+$mp: !important;
+
+.Slider{
+  .slider{height: 100%; background-color: transparent;}
+  .sli_swiper{
+    height: clamp(50vw, 100vh, 500px);
+    // width: 60%;
+  }
+}

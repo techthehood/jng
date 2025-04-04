@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+$mp: !important;
+
+:root p {
+  text-align: left $mp;
+}
+
+.Blog{
+  section{padding: 2rem 0;}
+  .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    line-height: 1.2; font-weight: 500; font-family: 'Montserrat', sans-serif; color: #404854;
+    text-transform: unset $mp;
+    p{
+      overflow-wrap: break-word;
+    }
+  }
+  .heading-area{ 
+    padding: 3rem 0 $mp;
+    .title {
+      font-size: 40px;
+      font-weight: 600;
+      margin: 15px 0 25px;
+    }
+    .sub-title{
+      color: var(--main-secondary-color);
+    }
+  }
+  .alt-color {
+    // color: #03a9f5;
+    color: var(--main-site-color, #03a9f5);
+  }
+  .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+
+  .col-lg-4:not(:nth-last-child(1)), .col-md-4:not(:nth-last-child(1)){ 
+    .news-item {
+    margin-bottom: 3rem;
+    }
+  }
+
+  .news-item{ 
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: left $mp;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+
+    img{
+      width: 100%;
+    }
+
+    &:hover {
+      transform: translateY(-5px);
+      -webkit-box-shadow: 0 0 5px rgb(0 0 0 / 12%);
+      box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    }
+    .news-text-box {
+      padding: 10%;
+      background-color: #f8f9fa;
+      .date {
+        font-weight: 400;
+        &.main-color {
+          // color: #f033b5;
+          color: var(--main-secondary-color, #f033b5);
+        }
+      }// date
+      .news-title {
+        margin: 10px 0;
+        font-weight: 400;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+      }
+    }// news-text-box
+
+    .author {
+      -ms-flex-align: center;
+      align-items: center;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 10px;
+      &.align-items-center {
+        -ms-flex-align: center !important;
+        align-items: center !important;
+      }
+      .author-name {
+        font-size: 15px;
+        margin: 0;
+        -webkit-transition: all .3s ease-in-out;
+        -moz-transition: all .3s ease-in-out;
+        -ms-transition: all .3s ease-in-out;
+        -o-transition: all .3s ease-in-out;
+        transition: all .3s ease-in-out;
+      }
+
+      img {
+        max-width: 50px;
+        border-radius: 50px;
+        overflow: hidden;
+        margin-right: 15px;
+      }
+    }
+  }
+
+
+
+}
+

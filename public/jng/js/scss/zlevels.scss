@@ -1,0 +1,7 @@
+
+$mp: !important;
+
+.team_view_modal_cont {  z-index: 11115;}
+.header{z-index: 11111;}
+.side-menu{z-index: 1114 $mp;}// redundant - values are set in a native css file
+.fixed-nav-on-scroll {z-index: 1111;}// redundant - values are set in a native css file

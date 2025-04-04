@@ -1,0 +1,291 @@
+@use '../../../lib/scss/media';
+// @include media.tablet {
+//   /*xxl desktop tablet mobile*/
+// }
+$mp: !important;
+
+.Hero{
+  width: 100%;
+  height: 100%;
+  .hero_wrapper{ height: 100%; width: 100%; margin: unset;}
+
+  .container-fluid {
+    padding-left: unset $mp;
+    padding-right: unset $mp;
+  }
+  
+  .content-inner {
+    height: 100%;
+    // padding: unset;
+  }
+  
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    left: 0;
+    top: 0;
+  }
+  
+  .banner-text-left {
+    &.slide-2-title{
+      width: 80%;
+      h1 {
+        font-size: 3rem;
+        overflow-wrap: unset;
+      }
+    }
+    h1, p {color: #000;}
+    a{
+      background-color: black;
+    }
+    p{text-align: right;}
+  }
+  
+  .banner-right-area-content {
+    color: black;
+  
+    a {
+      background-color: black;
+    }
+  }
+  
+  .banner-text-right {
+    z-index: 2;
+  
+    &.flyer {
+      width: 24rem;
+      width: clamp(30vw, 24rem, 85vw);
+      height: 31rem;
+      height: clamp(28vw, 31rem, 100vw);
+  
+      // height: clamp(20vh,31rem, 80vw);
+      .fly-box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: column nowrap;
+        gap: .5rem;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+  
+        img {
+          width: 80%;
+          height: 80%;
+          object-fit: cover;
+          margin-top: 3rem;
+        }
+  
+        .fly-btn {
+          background-color: black;
+        }
+      }
+    }
+  }
+  
+  .btn {
+    cursor: pointer;
+  }
+}
+
+%full{
+  width: 100%;
+  height: 100%;
+}
+
+.heroics{
+  .banner-text-left{
+    h1{
+      -webkit-text-stroke: 4px #e8d716;
+      -webkit-text-fill-color: #5bbdbb;
+      font-size: 8rem;
+    }
+    p{
+      color: #e8d716;
+      font-size: 2rem;
+    }
+  }
+  .banner-text-right.flyer {
+    width: 100%;
+    height: 40rem;
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    @include media.desktop {
+      // helps adjust fly-box area covering events dropdown menu
+      top: 20rem;
+    }
+    @include media.xxl {
+      // helps adjust fly-box area covering events dropdown menu
+      top: 22rem;
+    }
+
+    .fly-box {
+      top: unset;
+      right: 0;
+      left: unset;
+      bottom: -7rem;
+      height: 100%;
+      width: 100%;
+
+      @include media.mobile {
+        bottom: -23rem;
+      }
+      @include media.mini {
+        bottom: -23rem;
+      }
+      @include media.tablet {
+        width: 82%;
+      }
+      @include media.laptop {
+        width: 154%;
+      }
+      @include media.desktop {
+        width: 140%;
+        bottom: 5rem;
+      }
+      @include media.xxl {
+        bottom: 3rem;
+      }
+      
+  
+      .fly-img {
+        @extend %full;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        // width: 140%;
+      }
+  
+      img {
+        width: 100%;
+        // height: 80%;
+      }
+  
+      .fly-btn {
+        position: absolute;
+        top: 0;
+        @include media.mobile {
+          top: 4rem;
+        }
+        @include media.mini {
+          top: 3rem;
+        }
+        @include media.desktop {
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.sunshine{
+  background-color: #49b2c5;
+  // [sunshine inspiration](https: //dribbble.com/shots/18148134-NFT-Marketplace-Website)
+  .hero-image{
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    @include media.mobile {
+      background-size: cover;
+    }
+    @include media.mini {
+      background-size: cover;
+    }
+    @include media.laptop {
+      background-size: contain;// laptop and desktop
+    }
+    @include media.xxl {
+      background-size: cover;
+      // background-position: right;
+    }
+
+    @extend %full;
+    img{
+      @extend %full;
+      object-fit: contain;
+    }
+  }
+  .sun-title-wrapr{
+    @include media.mobile{
+      height: 75%;
+    }
+  }
+  .sun-promo-wrapr{padding: unset;}
+  .banner-text-right.flyer{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    height: 40rem;
+    bottom: 0;
+    padding: unset;
+    .fly-box{
+      // top: unset;
+      // right: -174px;
+      left: unset;
+      right: 0;
+      top: unset;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      @include media.mobile {
+        right: unset;
+        bottom: -15rem;
+      }
+      
+      @include media.mini {
+        right: unset;
+        bottom: -15rem;
+      }
+      
+      @include media.tablet {
+      }
+      
+      @include media.laptop {
+        right: 6rem;
+        // bottom: -18rem;
+        // width: 80%;
+        bottom: -10rem;
+        width: 100%;
+      }
+      
+      @include media.desktop {
+        width: 100%;
+        right: 0;
+        bottom: 0;
+      }
+      @include media.xxl {
+      }
+
+
+      .fly-img{
+        @extend %full;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+
+        @include media.mobile{
+          background-image: url("../../../MegaOne/digital-agency/img/yellow-vest.png") $mp;
+          background-size: cover;
+        }
+      }
+      img{
+        width: 100%;
+        // height: 80%;
+      }
+      .fly-btn{
+        position: absolute;
+        top: 60vh;
+      }
+    }
+  }
+}

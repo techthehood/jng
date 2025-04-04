@@ -1,0 +1,76 @@
+@use '../../scss/media';
+$mp: !important;
+%dark{
+  .promo{
+    h2{color: var(--main-secondary-color);}
+    h3{color: var(--main-site-color) $mp;}
+  }
+}
+%light{
+  .promo{
+    h2{color: var(--main-site-color);}
+    h3{color: var(--main-secondary-color) $mp;}
+  }
+}
+
+.Promo{
+  section{
+    @mixin small {
+      padding: 2.5rem 0;
+      // padding-top: 4.5rem 0;
+    }
+    @include media.smartphone{ @include small; }
+    @include media.mini{ @include small; }
+    @include media.tablet {
+      padding: 4rem 0;
+      padding-top: 7rem;
+    }
+    // @include media.laptop {
+    //   bottom: -257px;
+    // }
+    // @include media.desktop {
+    //   bottom: -100px;
+    // }
+  }
+
+  .text_cont{
+    
+    @mixin small {
+      padding: 3rem 1.5rem !important;
+      h2, h3{
+        font-size: 1.5rem;
+      }
+    }
+     @include media.smartphone{ @include small; }
+     @include media.mini{ 
+      h2{
+      font-size: 1.5rem;
+      }
+      h3{
+        font-size: 1.1rem;
+      }
+    }// mini
+    @include media.laptop {
+      h2{
+        font-size: 2.5rem;
+      }
+      h3{
+        font-size: 1.9375rem;
+      }
+    }// laptop
+  }
+
+  &.dark{
+    @extend %dark;
+  }
+  &.light{
+    @extend %light;
+  }
+  .btn1{background-color: var(--main-secondary-color);}
+  .btn2{
+    background-color: var(--main-site-color); 
+    color: #000; 
+    font-weight: bold;
+    &:hover{background-color: var(--main-site-color-dark);}
+  }
+}

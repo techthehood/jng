@@ -1,0 +1,47 @@
+<!--About Star-->
+  <section class="about-sec" id="about-sec">
+    <svg id="about-header-svg" class="separator__svg" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
+      fill="#e8d716" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 100 100 V 10 L 0 100" />
+      <path d="M 30 73 L 100 18 V 10 Z" fill="#e8d716" stroke-width="0" />
+    </svg>
+    <div class="container">
+      <div class="row about-box">
+        <!-- Heading Area-->
+        <div class="service-title slim">
+          <h1>{{title}}</h1>
+          <h1>{{title1}} <span>{{title2}}</span> {{title3}}</h1>
+        </div>
+        <div class="col-lg-6 wow fadeInUp details-col">
+          <div class="service-details">
+            <div class="service-title wide">
+              <h1>{{title}}</h1>
+              <h1>{{title1}} <span>{{title2}}</span> {{title3}}</h1>
+            </div>
+            <div class="service-details-inner {{tag}}">
+              {{!-- inject details here --}}
+            </div>
+          </div>
+        </div>
+
+        <!-- Features Box-->
+        <div class="col-lg-6 card-col">
+          <div class="services-area-width-manage">
+            <div class="row no-gutters services-area {{tag}}">
+              {{!-- inject slider data here --}}
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <svg id="banner_svg" class="separator__svg" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none"
+      fill="#ffffff" version="1.1" xmlns="http://www.w3.org/2000/svg">
+      <path d="M 100 100 V 10 L 0 100" />
+      <path d="M 30 73 L 100 18 V 10 Z" fill="#ffffff" stroke-width="0" />
+      {{#if images.active}}
+      <img src="{{images.pot}}" class="wow slideInLeft" data-wow-delay="1s" alt="plant">
+      {{/if}}
+    </svg>
+  </section>
+<!--About End-->

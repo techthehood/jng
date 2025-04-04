@@ -1,0 +1,64 @@
+<!--Blog Start-->
+<section class="Blog" id="blog">
+  {{!-- section formerly bg-light --}}
+  <div class="container">
+    <!--Row-->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <div class="heading-area mx-570 pb-lg-5 mb-5">
+          <span class="sub-title">We are megaone company</span>
+          <h2 class="title mb-0">Our 
+            {{!-- <span class="alt-color js-rotating">latest blogs,recent news</span> --}}
+            <div id="container">
+              <span id="text1"></span>
+              <span id="text2"></span>
+            </div>
+            
+            <svg id="filters">
+              <defs>
+                <filter id="threshold">
+                  <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                              0 1 0 0 0
+                              0 0 1 0 0
+                              0 0 0 255 -140" />
+                </filter>
+              </defs>
+            </svg>
+             will
+            keep
+            everyone updated</h2>
+        </div>
+      </div>
+    </div>
+    <!--Row-->
+    <div class="row wow fadeInUp">
+      <!--News Item-->
+      {{#each content}}
+        {{#if active}}
+          <div class="col-md-4">
+            <div class="news-item">
+              <img alt="image" class="news-img" src="{{img}}">
+              <div class="news-text-box">
+                {{#if date.active}}
+                  <span class="date main-color">{{date.value}}</span>
+                {{/if}}
+                <a href="agency/blog-list.html">
+                  <h4 class="news-title">{{title}}</h4>
+                </a>
+                <p class="para">{{text}}</p>
+                {{#if author.active}}
+                  <a class="author d-flex align-items-center" href="{{author.link}}">
+                    <img alt="image" class="author-img bg-purple" src="{{author.img}}">
+                    <h5 class="author-name">{{author.name}}</h5>
+                  </a>
+                {{/if}}
+              </div>
+            </div>
+          </div>
+        {{/if}}
+      {{/each}}
+      <!--News Item-->
+    </div>
+  </div>
+</section>
+<!--Blog End-->

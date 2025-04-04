@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  {{>"ograph"}}
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+  <!-- attach CSS styles -->
+  
+  {{!-- {{>(vendor 'w3schools' use_local_files true)}} --}}
+  {{!-- {{>(vendor 'oauth_links' use_local_files true)}} --}}
+
+  {{>"MegaOne_DigitalAgency_css"}}
+  {{>(bundle 'bundle_css' production)}}{{!-- see router/jng.js for 'production' variable --}}
+  {{>"swiper"}}
+  <link rel="manifest" href="./jng/js/manifest.json" />
+
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="90">
+  {{!-- <div class="se-pre-con"></div> not used in this template --}}
+  <!--  BODY PAGE CONTENT -->
+  <!-- navigation panel -->
+  <div class="modal_home"></div>
+  <div class="root"></div>
+  <div class="deferMe"></div>
+  <!-- first section - Home -->
+
+  <!-- /first section -->
+
+  <!-- Bottom Social -->
+
+  <!-- /Bottom Social -->
+
+  <!-- Footer -->
+
+  <!-- .Footer -->
+
+  <!-- attach JavaScripts --> 
+  {{>(bundle 'bundle_js' production)}}
+  {{!-- {{>"MegaOne_DigitalAgency_js"}} --}}
+</body>
+
+</html>

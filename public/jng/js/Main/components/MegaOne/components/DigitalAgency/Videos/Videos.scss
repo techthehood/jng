@@ -1,0 +1,38 @@
+@use '../../../lib/scss/media';
+$mp: !important;
+
+.Videos{
+  // width: 300px;
+  .Slant{
+    background-color: #202020;
+    // .slant_cont{padding-top: 5rem;}
+  }
+  .Slider{
+    .sli_swiper {
+
+      @mixin small {width: 90%; height: 65vw;}
+      @include media.mobile{ @include small; }
+      @include media.mini{ @include small; }
+      @include media.tablet{width: 90%; height: 55vw;}
+      // @include media.laptop{width: 60%;}
+      .swiper-slide{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .slide_video{
+    filter: drop-shadow(20px 4px 6px black);
+    @mixin small {
+      width: 80vw;
+      height: 45vw;
+    }
+    @include media.mobile{ @include small; }
+    @include media.mini{ @include small; }
+    // @include media.tablet{
+    //   width: 700px;
+    //   height: 400px;
+    // }
+  }
+}

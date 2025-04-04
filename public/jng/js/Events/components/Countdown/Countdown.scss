@@ -1,0 +1,65 @@
+@use '../../media';
+$mp: !important;
+
+.root{
+  .Countdown{
+    z-index: 2;
+
+    @mixin small {margin-top: 2rem;}
+    @include media.smartphone{ @include small; }
+    @include media.mini{ @include small; }
+    @include media.tablet{ margin-top: -4rem;}
+    @include media.laptop{ margin-top: 3rem;}
+    @include media.desktop{ margin-top: 7rem;}
+    @include media.xxl{ margin-top: 15rem;}
+
+    .conference{
+      padding: 0 1rem;
+      h2{ padding: 0 2rem;}
+      .row{color: black;}
+      // background-color: var(--main-color);
+      .register-now-btn {
+        color: var(--main-color);
+        &:hover{
+          color: var(--white);
+          i {
+            color: var(--white);
+          }
+        }
+        i {
+          color: var(--main-color);
+        }
+      }
+      .count-down{ 
+        // filter: drop-shadow(2px 4px 6px var(--main-site-color));
+        @mixin small {background: var(--main-secondary-color); padding: 1rem 0;}
+        @include media.smartphone{ @include small; }
+        @include media.mini{ @include small; }
+        @include media.tablet{background: unset; padding: unset;}
+        .count-day{ 
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          padding: 1rem;
+          @mixin small {font-size: 1rem; gap: 1rem; border-right: unset;}
+          @include media.smartphone{ @include small; }
+          @include media.mini{ @include small; }
+          @include media.tablet{ font-size: 1.5rem; gap: .5rem; border-right: 1px solid var(--main-secondary-color);}
+          @include media.desktop{ gap: 1.5rem;}
+          .count-number {
+            // border-bottom: 1px solid var(--off-main-color);
+            filter: drop-shadow(2px 4px 6px var(--main-site-color));
+          }
+          
+          &:last-child{border-right: unset;}
+          span{width: 100%; text-align: center;}
+        }
+        .count-down-address{
+          padding: 0 80px;
+          @include media.desktop{ padding: 0 55px;}
+          @include media.smartphone{ padding: 0 30px; }
+        }
+      }
+    }// conference
+  }// Countdown
+}// root

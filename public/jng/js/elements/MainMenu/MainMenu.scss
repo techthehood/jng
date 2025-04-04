@@ -1,0 +1,17 @@
+.menu-container{
+  font-size: 15px;
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+  &.fixed{
+    position: fixed;
+    top: 0;
+    background-color: white;
+  }
+  .brand-title{width: 8rem;}
+  ul a{color: white;}
+}

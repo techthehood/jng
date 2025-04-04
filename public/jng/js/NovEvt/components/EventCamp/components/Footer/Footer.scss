@@ -1,0 +1,13 @@
+$mp: !important;
+
+.bottom-social{ background-color: #000; font-size: 1.5rem;}
+.footer-top {background: var(--main-color); font-size: 1.5rem;}
+.footer-bottom {
+  font-size: 1rem;
+  background: #000;
+  color: var(--main-color);
+}
+.footer-bottom a {color: var(--sunzao);
+  &:active, &:hover{color: #7f28c1;}
+}
+.footer-right {padding-top: unset $mp;}

@@ -1,0 +1,16 @@
+$mp: !important;
+
+.FixedNav{
+  .fixed-nav-appear{
+    width: 280px;
+    top: 0;
+    .fixed-icon-scroll{
+      display: flex;
+      margin: unset;
+      justify-content: center;
+      .lni-menu{font-size: 50px;}
+      i{color: #000; text-shadow: 0px 3px white;}
+    }
+  }
+  .fixed-nav-on-scroll{background-color: unset;}
+}

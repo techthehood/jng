@@ -1,0 +1,46 @@
+<!-- Bottom Social -->
+<div id="elements" class="bottom-social" data-comp="Footer"> 
+  <a href="{{social.FACEBOOK.url}}" class="fa fa-facebook" aria-hidden="true" target="_blank"></a> 
+  <a href="{{social.TWITTER.url}}" class="fa fa-twitter" aria-hidden="true" target="_blank"></a> 
+  <a href="{{social.LINKEDIN.url}}" class="fa fa-linkedin" aria-hidden="true" target="_blank"></a> 
+  {{!-- <a href="{{social.FACEBOOK.url}}" class="fa fa-vimeo" aria-hidden="true" target="_blank"></a>  --}}
+  {{!-- <a href="{{social.FACEBOOK.url}}" class="fa fa-google-plus" aria-hidden="true" target="_blank"></a>  --}}
+  <a href="{{social.INSTAGRAM.url}}" class="fa fa-instagram" aria-hidden="true" target="_blank"></a> 
+</div>
+<!-- /Bottom Social -->
+
+<!-- Footer -->
+<footer>
+  <div class="footer-top">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-3 col-xs-12">
+          <div class="footer-left">
+            <p class="no-margin"><strong>{{title1}}</strong> {{title2}}</p>
+          </div>
+        </div>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <div class="footer-right hidden-xs">
+            <ul>
+              <li><a href="#home" >Home</a><span>|</span></li>
+              <li><a  href=#{{menu.[0].href}}>{{menu.[0].title}}</a><span>|</span></li>
+              <li><a  href=#{{menu.[1].href}}>{{menu.[1].title}}</a><span>|</span></li>
+              {{!-- <li><a  href=#{{menu.[2].href}}>{{menu.[2].title}}</a><span>|</span></li> --}}
+              {{!-- <li><a  href=#{{menu.[3].href}}>{{menu.[3].title}}</a><span>|</span></li> --}}
+              {{!-- <li><a  href=#{{menu.[4].href}}>{{menu.[4].title}}</a><span>|</span></li> --}}
+              <li><a  href=#{{menu.[5].href}}>{{menu.[5].title}}</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="copytight">
+      <p>&copy; {{year}} {{copy}} <a href="{{url}}"
+          title="{{creator}}" target="_blank"> {{creator}}</a></p>
+    </div>
+  </div>
+  <a href="#" id="back-to-top"  class="w3-card" title="Back to top">&uarr;</a>
+</footer>
+<!-- .Footer -->

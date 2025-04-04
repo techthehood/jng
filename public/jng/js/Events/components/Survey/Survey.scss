@@ -1,0 +1,326 @@
+// @use '../../../scss/media';
+@use '../../media';
+
+.survey_container {
+  width: 100%;
+
+  @mixin small {
+    display: block;
+    height: unset; // i need this to keep the coundown from riding up
+    object-fit: cover;
+  }
+  @include media.mobile{@include small;}
+  @include media.mini {@include small;}
+  @include media.tablet {
+    height: 400px;
+    display: flex;
+    // grid-template-areas: "text img";
+    // grid-template-columns: 1fr 1fr;
+  }
+
+  .survey_text_cont {
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+
+    // padding: 3rem;
+    @mixin small {
+      padding: 20% 8% 8%;
+      width: 100%;
+    }
+    @include media.mobile { @include small;}
+    @include media.mini {@include small;}
+    @include media.tablet {
+      padding: 22% 8% 8%;
+      width: 50%;
+    }
+    @include media.laptop {
+      padding: 18% 8% 8%;
+    }
+
+    color: white;
+    grid-area: text;
+    z-index: 1;
+
+    h3 {
+      color: var(--main-secondary-color);
+    }
+
+    @mixin small {
+      position: absolute;
+      text-align: center;
+      gap: 1rem;
+
+      h1 {
+        font-size: 54%;
+      }
+
+      h3 {
+        font-size: 40%;
+      }
+    }
+    @include media.mini {@include small;}
+    @include media.mobile {@include small;}
+    @include media.tablet {
+      position: relative;
+      text-align: right;
+      gap: 4%;
+
+      h1 {
+        // font-size: 3rem;
+        font-size: 23%;
+      }
+
+      h3 {
+        font-size: 16%;
+      }
+    }
+
+    // .nav_btns {
+    //   display: flex;
+    //   width: 100%;
+
+    //   // gap: 2rem;
+    //   @mixin small {
+    //     a {
+    //       font-size: 25%;
+    //     }
+
+    //     justify-content: center;
+    //     gap: 1rem;
+    //   }
+
+    //   @include media.mini {
+    //     @include small;
+    //   }
+
+    //   @include media.mobile {
+    //     @include small;
+    //   }
+
+    //   @include media.tablet {
+    //     justify-content: flex-end;
+    //     gap: 8%;
+
+    //     a {
+    //       font-size: 12%;
+    //     }
+    //   }
+
+    //   a {
+    //     // font-size: 1.5rem;
+    //     padding: 3% 4%;
+    //     // padding: 1.25rem;
+    //     font-weight: bold;
+    //     border: 3px solid;
+    //     border-radius: 1.5rem;
+
+    //     &.learn {
+    //       color: var(--main-site-color);
+    //       border-color: var(--main-secondary-color);
+    //     }
+
+    //     &.register {
+    //       color: var(--main-secondary-color);
+    //       border-color: var(--main-site-color);
+    //     }
+    //   }
+
+    //   // a
+    // }
+  }
+
+  .survey_img_cont {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+
+    @mixin small {
+      position: relative;
+    }
+    @include media.mini {@include small;}
+    @include media.mobile {@include small;}
+    @include media.tablet {
+      position: absolute;
+    }
+
+    .dad_job {
+      -webkit-clip-path: url(#surveyMask);
+      clip-path: url(#surveyMask);
+
+      @mixin small {
+        height: 430px;
+        object-fit: cover;
+      }
+      @include media.mini {@include small;}
+      @include media.mobile {@include small;}
+      @include media.tablet {
+        height: unset;
+      }
+    }
+  }
+
+  .path {
+
+    // transform:scale(.6) translate(-70, -130);
+    @mixin small {
+      transform: translate(-36%, -56%);
+    }
+    @include media.mini {@include small;}
+    @include media.mobile {@include small;}
+    @include media.tablet {
+      transform: translate(-29%, -67%);
+    }
+    @include media.laptop {
+      transform: translate(-23%, -57%);
+    }
+    @include media.desktop {
+      transform: translate(-17%, -47%);
+    }
+    @include media.xxl {
+      transform: translate(-9%, -33%);
+    }
+  }
+
+  .date-saver {
+    // position: absolute;
+    grid-area: img;
+    z-index: 1;
+
+    @mixin small {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      top: 185px;
+      width: 100%;
+      padding: 0 3rem;
+      margin-top: -4rem;
+    }
+    @include media.mobile {@include small;}
+    @include media.mini {@include small;}
+    @include media.tablet {
+      display: flex;
+      justify-content: center;
+      padding: 4rem 1rem 1rem;
+      top: 0;
+      right: 0;
+      width: 50%;
+      height: 77%;
+      margin-top: unset;
+    }
+    @include media.laptop {
+      height: unset;
+      padding: 5rem 3rem 3rem;
+    }
+
+    // img {
+    //   filter: drop-shadow(2px 4px 6px #6c757d);
+
+    //   @mixin small {
+    //     width: 80%;
+    //   }
+
+    //   @include media.mobile {
+    //     @include small;
+    //   }
+
+    //   @include media.mini {
+    //     @include small;
+    //   }
+
+    //   @include media.tablet {
+    //     width: 30vw;
+    //     object-fit: contain;
+    //   }
+
+    //   @include media.laptop {
+    //     width: 25vw;
+    //   }
+    // }
+  }
+
+  svg {
+    position: absolute;
+  }
+}
+
+.linkList_wrapper{
+    display: flex;
+    flex-flow: column nowrap;
+    .linkList_inner{
+      display: flex;
+      flex-flow: column nowrap;
+      // grid-template-areas: "business ." "agency ." "general ." "applicant .";
+      // grid-template-columns: 5fr 1fr;
+      // grid-template-columns: auto minmax(1fr,3rem);
+      padding: 0.5rem;
+      gap: 1rem;
+      flex-flow: column nowrap;
+      .business { grid-area: business;}
+      .agency { grid-area: agency;}
+      .general { grid-area: general;}
+      .applicant { grid-area: applicant;}
+
+      .linkList_dnld{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        border-radius: .5rem;
+        // background-color: var(--main-color);
+        border: 3px solid var(--main-color);
+        color: var(--main-color);
+        padding: unset;
+        text-decoration: none;
+
+        @include media.tablet{
+          padding: 0 .25rem;
+          // font-size: 1.5rem;
+        }
+
+        @include media.mobile{
+          padding: 0 .25rem;
+          font-size: 1.5rem;
+        }
+        p{
+          margin-bottom: 0.5rem; font-size: .6em;
+          font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        }
+      }// linkList_dnld
+
+    
+      .sTree_link_content.active{
+        background-color: var(--main-color);
+        .sTree_link_title{color: white; text-shadow: 2px 2px 2px #323131;}
+        .sTree_link_desc {color: #ccc; font-size: 1.2em;}
+
+      }
+    }// linkList_inner
+  }// linkList_wrapper
+
+  .survey_container{
+    .linkList_wrapper{
+      width: 100%;
+    }
+    .sTree_link_content{
+      font-size: 10%; 
+      background: white;
+      padding: 1rem 1.5rem;
+      @mixin small {
+        h3{font-size: 2.5em;}
+        .sTree_link_desc{font-size: 2.3em;}
+      }
+      @include media.mobile { @include small;}
+      @include media.mini {@include small;}
+      @include media.tablet {
+        h3{font-size: 1.7em;}
+        .sTree_link_desc{font-size: 1.5em;}
+      }
+      @include media.laptop {
+        h3{font-size: 1.5em;}
+        .sTree_link_desc{font-size: 1.3em;}
+      }
+
+    }
+  }

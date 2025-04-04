@@ -1,0 +1,33 @@
+$mp: !important;
+
+.sTree_link_content {
+  width: 100%;
+  border-radius: .5em;
+  a{color: unset;
+    &:hover{color: unset; text-decoration: unset;}
+  }
+  &.default{
+    .sTree_link{
+      &.left_display{
+        .sTree_link_title, .sTree_link_desc{justify-self: flex-start;}
+      }// left_display
+      display: grid;
+      grid-template-areas:
+          "img txt icon" "img desc icon";
+      grid-template-columns: auto 3fr auto;
+      border-radius: .5em;
+      .sTree_link_title, .sTree_link_desc{text-align: left; width: 100%;}
+      .sTree_link_title{text-shadow: 2px 2px 2px #ccc; grid-area: txt;line-height: 1.7; margin: unset;}
+      .sTree_link_desc{color: #9e9e9e; grid-area: desc; }
+      .pTLink.ProfileIcon_icon_wrapper{
+        grid-area: img; height: 4em; width: 5em;
+         margin-right: 1rem;
+        .image_area{
+          height: 100%;
+          img, canvas{height: 100%; width: 100%; object-fit: cover;}
+        }
+      }
+    }// sTree_link
+  }
+  
+}// sTree_link_content

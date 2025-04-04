@@ -1,0 +1,51 @@
+
+@use '../../../lib/scss/media';
+$mp: !important;
+
+.Portfolio{
+  a {background: #000;}
+    .portfolio-title {
+      @mixin small {width: 50%; h1{font-size: 2rem;}}
+      @include media.mobile{ @include small; }
+      @include media.mini{ @include small; }
+      @include media.tablet{
+        width: 30%; 
+        flex: 0 0 30%;
+        h1{font-size: 2rem;}
+      }
+    }
+    .portfolio-btns {
+      @mixin small {width: 50%;.cbp-filter-item{font-size: 2rem;}}
+      @include media.mobile{ @include small; }
+      @include media.mini{ @include small; }
+      @include media.tablet{
+        width: 30%; 
+        flex: 0 0 30%;
+        .cbp-filter-item{font-size: 2rem;}
+      }
+    }
+  }
+  .cbp-popup-close{
+    background: url(../../../../icons/iconmonstr-x-mark-circle-thin.svg) no-repeat scroll 0 0px transparent $mp;
+    height: 32px $mp;
+    width: 32px $mp;
+    right: 20px $mp;
+    top: 20px $mp;
+    background-size: 32px $mp;
+  }
+  .cbp-popup-next{
+    background: url(../../../../icons/iconmonstr-angel-right-circle-thin.svg) no-repeat scroll 0 0px transparent $mp;
+    height: 32px $mp;
+    width: 32px $mp;
+    right: 20px $mp;
+    top: 0 $mp;
+    background-size: 32px $mp;
+  }
+  .cbp-popup-prev{
+    background: url(../../../../icons/iconmonstr-angel-left-circle-thin.svg) no-repeat scroll 0 0px transparent $mp;
+    height: 32px $mp;
+    width: 32px $mp;
+    left: 20px $mp;
+    top: 0 $mp;
+    background-size: 32px $mp;
+  }

@@ -1,0 +1,48 @@
+$mp: !important;
+
+.Team{
+  .image-holder img{
+    object-fit: contain;
+  }
+  #team-circle-left, #team-circle-right {display: none;}
+}
+// set in .modal_home
+.team_view_modal_cont{
+  .team_view_closeBtn{
+    position: absolute; 
+    cursor: pointer;
+    // background: white;
+    padding: 0.5rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+
+    // top: -29px !important;
+    top: 0px !important;
+    // right: -38px !important;
+    right: 0px !important;
+  }// team_view_closeBtn
+  .team_view_modal{
+    max-width: unset $mp;
+  }
+}
+
+.TeamBio{
+  display: flex;
+  .TeamBio_cont{padding: 2rem;}
+  .TeamBio_img{ 
+    display: flex; 
+    justify-content: center;
+  }
+  .TeamBio_txt{
+    p{text-align: justify;}
+  }
+
+}
+
+.team_view_modal{
+  max-height: 90vh;
+  .team_view_content{
+    max-height: 80vh;
+    overscroll-behavior: contain;
+  }// team_view_content
+}// team_view_modal

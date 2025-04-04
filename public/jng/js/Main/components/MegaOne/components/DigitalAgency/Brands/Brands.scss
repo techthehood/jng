@@ -1,0 +1,11 @@
+$mp: !important;
+
+.Brands{
+  .logo-item{
+    min-height: 13rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{opacity: unset $mp; object-fit: contain;}
+  }
+}

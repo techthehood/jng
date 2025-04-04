@@ -1,0 +1,12 @@
+$mp: !important;
+
+body{
+  // font-size: 15vw;// FAILs
+}
+
+@import "../scss/colors";
+@import "../scss/offCanvas";
+
+.Confirm{
+  .menu-icon{display: none $mp;}
+}

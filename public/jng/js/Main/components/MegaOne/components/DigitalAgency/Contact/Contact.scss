@@ -1,0 +1,15 @@
+@use '../../../lib/scss/media';
+$mp:  !important;
+
+.Contact{
+  a, .submit {background: #000; color: #fff $mp;}
+  .submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: unset $mp;
+  }
+  .text-center p{
+    text-align: unset $mp;
+  }
+}

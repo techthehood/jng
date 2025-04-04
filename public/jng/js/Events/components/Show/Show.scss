@@ -1,0 +1,362 @@
+// @use '../../../scss/media';
+@use '../../media';
+$mp: !important;
+
+%Slider {
+  .sli_swiper {
+
+    @mixin small {
+      width: 90%;
+      height: 80vw;
+    }
+
+    @include media.smartphone {
+      @include small;
+    }
+
+    @include media.mini {
+      @include small;
+    }
+
+    @include media.tablet {
+      width: 90%;
+      // height: 55vw;
+      height: 16rem;
+    }
+
+    // @include media.laptop{width: 60%;}
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
+  .slide_photo {
+    // filter: drop-shadow(7px 7px 2px #ccc);// this is cancelled out by mobile and mini - put in tablet
+    object-fit: scale-down;
+    height: 100%;// fix for portrait orientation images
+  
+    @mixin small {
+      width: 80vw;
+      // height: 45vw;
+      filter: unset;// no need for a drop shadow in cube mode
+    }
+  
+    @include media.smartphone {
+      @include small;
+    }
+  
+    @include media.mini {
+      @include small;
+    }
+  
+    @include media.tablet{
+      // width: 700px;
+      // height: 400px;
+      filter: drop-shadow(7px 7px 2px #ccc);
+    }
+  }
+}// %Slider
+
+.show_container{
+  &.card-container{padding: 2rem;}
+  .show_inner{
+    position: relative;
+    width: 100%;
+    @mixin small{
+      display: block;
+      height: unset;// i need this to keep the coundown from riding up
+      object-fit: cover;
+    }
+    @include media.smartphone {
+      @include small;
+    }
+    @include media.mini {
+      @include small;
+    }
+    @include media.tablet{
+      // height: 400px;
+      display: grid;
+      grid-template-areas: "text img" "photo photo";
+      grid-template-columns: 1fr 1fr;
+    }
+    .show_text_cont{
+      display: flex;
+      flex-flow: column;
+      grid-area: text;
+      gap: 2rem;
+      h1, h3, p {margin-bottom: unset;}
+      // padding: 3rem;
+      @mixin small {
+        padding: 15% 8% 8%;
+        p{font-size: .7rem;}
+      }
+      @include media.smartphone{ @include small; }
+      @include media.mini{ @include small; }
+      @include media.tablet{padding: 22% 8% 8%; p{font-size: .6rem;}}
+      @include media.laptop{ padding: 18% 8% 8%;}
+      // color: white;
+      color: black;
+      grid-area: text;
+      z-index: 1;
+      h3{
+        color: var(--main-secondary-color);
+      }
+      @mixin small {
+        position: absolute;
+        text-align: center;
+        gap: 1rem;
+        h1{
+          font-size: 1rem;
+        }
+        h3{
+          font-size:.8rem;
+        }
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.tablet {
+        position: relative;
+        text-align: right;
+        gap: .5rem;// 4%
+        h1{
+          // font-size: 3rem;
+          font-size: 1rem;//23%;
+        }
+        h3{
+          font-size: .8;
+        }
+      }
+      @include media.desktop {
+        h1{ font-size: 2.5rem;}
+        h3{font-size: 1.5rem; }
+        p{font-size: 1rem; }
+      }
+      .nav_btns{
+        display: flex;
+        width: 100%;
+        // gap: 2rem;
+        @mixin small {
+          a{font-size: .8rem;}
+          justify-content: center;
+          gap: 1rem;
+        }
+        @include media.mini {
+          @include small;
+        }
+        @include media.smartphone {
+          @include small;
+        }
+        @include media.tablet {
+          justify-content: flex-end;
+          gap: 8%;
+          a{font-size: .8rem;}
+        }
+        a{
+          // font-size: 1.5rem;
+          padding: 1% 4%;
+          // padding: 1.25rem;
+          font-weight: bold;
+          border: 3px solid;
+          border-radius: 1.5rem;
+          &.learn{
+            color: var(--main-site-color);
+            border-color: var(--main-secondary-color);
+          }
+          &.register{
+            color: var(--main-secondary-color);
+            border-color: var(--main-site-color);
+          }
+        }// a
+      }
+    }
+    .show_img_cont{
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      @mixin small {
+        position: relative;
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.tablet {
+        position: absolute;
+      }
+
+      .dad_job{
+        @mixin small{
+          height: 430px;
+          object-fit: cover;
+        }
+        @include media.mini {
+          @include small;
+        }
+        @include media.smartphone {
+          @include small;
+        }
+        @include media.tablet {
+          height: unset;
+        }
+      }
+    }
+    // .event-photo-slide{
+    //   height: 10rem;
+    //   // grid-area: photo;
+    //   .evp-swiper{
+    //     @extend %Slider;
+    //     // height: 5rem;
+    //   }
+    // }
+    .path{
+      // transform:scale(.6) translate(-70, -130);
+      @mixin small{
+        transform: translate(-36%, -56%);
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.tablet {
+        transform: translate(-29%, -67%);
+      }
+      @include media.laptop {
+        transform: translate(-23%, -57%);
+      }
+      @include media.desktop {
+        transform: translate(-17%, -47%);
+      }
+      @include media.xxl {
+        transform: translate(-9%, -33%);
+      }
+    }
+    .date-saver{
+      // position: absolute;
+      grid-area: img;
+      z-index: 1;
+      @mixin small{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        top: 185px;
+        width: 100%;
+        padding: 0 3rem;
+        margin-top: -4rem;
+      }
+      @include media.smartphone {
+        @include small;
+      }
+      @include media.mini {
+        @include small;
+      }
+      @include media.tablet {
+        display: flex;
+        justify-content: center;
+        padding: 1rem;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 77%;
+        margin-top: unset;
+      }
+      @include media.laptop {
+        height: unset;
+        padding: 5rem 3rem 3rem;
+      }
+      
+      img{
+        filter: drop-shadow(2px 4px 6px #6c757d);
+        @mixin small{
+          width: 80%;
+        }
+        @include media.smartphone {
+          @include small;
+        }
+        @include media.mini {
+          @include small;
+        }
+        @include media.tablet {
+          width: 30vw;
+          object-fit: contain;
+        }
+        @include media.laptop {
+          width: 25vw;
+        }
+      }
+    }
+    svg{position: absolute;}
+  }// show_inner
+  
+  .event-photo-slide{
+    // height: 10rem;
+    // grid-area: photo;
+    .evp-swiper{
+      @extend %Slider;
+      // height: 5rem;
+    }
+  }
+}
+
+.show_list{
+  // DEPRECATED - do i ever use show_list?
+  @mixin small {padding: 2rem 1rem $mp;}
+  @include media.smartphone{ @include small; }
+  @include media.mini{ @include small; }
+  @include media.tablet{padding: 22% 5% 8%;}
+  .show_inner{
+    @mixin small {
+      display: flex;
+      flex-flow: column;
+      .show_text_cont{order: 2; position: relative;}
+    }
+    @include media.smartphone {
+      @include small;
+    }
+    @include media.mini {
+      @include small;
+    }
+    @include media.tablet {
+      // height: 400px;
+      display: grid;
+      grid-template-areas: "text img" "photo photo";
+      grid-template-columns: 1.5fr 1fr $mp;
+    }
+    .show_text_cont {
+      @mixin small {padding: 2rem;}
+      @include media.smartphone{ @include small; }
+      @include media.mini{ @include small; }
+      @include media.tablet{padding: 10% 5% 8%;}//22%
+      @include media.laptop{padding: 7% 5% 8%;}
+    }
+    .event-photo-slide {
+      grid-area: photo;
+      .evp-swiper {
+        .slide_photo{
+          height: 10rem;
+        }
+      }
+    }
+  }
+  .date-saver {
+    padding: 3rem 1rem $mp;
+    height: 100% $mp;
+    @mixin small {top: unset $mp; margin-top: unset $mp; padding: 2rem 1rem $mp;}
+    @include media.smartphone{ @include small; }
+    @include media.mini{ @include small; }
+    img { 
+      @include media.laptop {
+        width: 33vw $mp;
+      }
+    }
+  }
+}

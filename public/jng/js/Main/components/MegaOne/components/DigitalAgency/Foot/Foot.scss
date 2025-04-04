@@ -1,0 +1,11 @@
+@use '../../../lib/scss/media';
+$mp:  !important;
+
+.Foot{
+  .company-about{
+    @mixin small {text-align: center;}
+    @include media.mobile{ @include small;}
+    @include media.mini{ @include small;}
+    @include media.tablet{text-align: left;}
+  }
+}

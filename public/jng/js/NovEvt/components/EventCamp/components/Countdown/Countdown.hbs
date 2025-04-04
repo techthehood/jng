@@ -1,0 +1,20 @@
+<section id="conference" class="conference" data-comp="Countdown">
+  <div class="container">
+    <div class="row">
+      <h2><strong>{{title1}}</strong> {{title2}}</h2>
+      <div class="count-down col-sm-12 col-sm-12 col-xs-12">
+        <div class="row">
+          <div class="col-sm-12 col-sm-12 col-xs-12">
+            <div class="count-day"><span class="count-number" data-count="235" id="day">0</span><span class="count-label">days</span></div>
+            <div class="count-day"><span class="count-number" data-count="05" id="hours">0</span><span class="count-label">hours</span></div>
+            <div class="count-day"><span class="count-number" data-count="54" id="minutes">0</span><span class="count-label">Minutes</span></div>
+            <div class="count-day"><span class="count-number" data-count="36" id="seconds">0</span><span class="count-label">Seconds</span></div>
+          </div>
+        </div>
+        {{!-- add a page detection condition for showing description and speakers btn --}}
+        <p class="count-down-description">{{description}} <strong>{{desc_bold}}</strong> {{desc_end}}</p>
+        <p class="count-down-address">{{address1}} <strong>{{address2}}</strong> {{address3}}</p>
+        {{!-- <a href="#speakers" class="register-now-btn">{{button}} <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a> </div> --}}
+    </div>
+  </div>
+</section>

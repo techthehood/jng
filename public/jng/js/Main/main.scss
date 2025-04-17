@@ -20,6 +20,15 @@ $hov: 10000;
   --sunzao: #ffeb3b;
   --active-blue: #2d2dad;
   --disabled-grey: #9e9e9e;
+
+  --img_root: '';
+  // --monument: '#{var(--img_root)}/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png'; // FAILS
+  // --monument: 'var(--img_root)/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png'; // FAILS
+  // --monument: var(--img_root)"/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png?file=main";// WORKS
+  
+  // $ir: --img_root;
+  // --monument: url($ir'/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png?file=main'); // FAILS
+  // .replace(/"/g,"").trim()
 }
 
 .cancelBtn{

@@ -1,5 +1,8 @@
+import { CDN_PATH } from '../paths/'
 import { event_images, july21, nov21, july22 } from "./event_images";
 import { client_list } from "./client_list";
+
+const ec_use_path = typeof FILE_SRC == "undefined" || FILE_SRC == "cdn" ? `${CDN_PATH}/` : "";
 
 export const date = "Friday, November 19, 2021 11:00:00";
 
@@ -36,14 +39,14 @@ export const main_data = {
           { label: "Next", href: `#lastest-blog`, cls: "fadeInUp", act: "",},
           { label: "July 2022", href: "#company-portfolio-section", cls: "fadeInUp", act: "",},
           { label: "Fall 2021", href: `${location.origin}/events/november-2021/`, cls: "fadeInUp", act: "", target: "_blank",},
-          { label: "July 2021", href: "#", cls: "fadeInUp", act: "",},
+          { label: "July 2021", href: `${location.origin}/events`, cls: "fadeInUp", act: "", target: "_self",},
         ]
       },
       {label:"CONTACT", href:"#contact-sec", cls:"fadeInDown", act:"",},
     ],
     images:{
-      logo1:"jng/EventCamp/images/jobsnotguns.png",// "jng/MegaOne/digital-agency/img/logo-white.png",
-      logo2:"jng/EventCamp/images/jobsnotguns.png",// "jng/MegaOne/digital-agency/img/logo-yellow.png",
+      logo1:`${ec_use_path}jng/EventCamp/images/jobsnotguns.png`,// "jng/MegaOne/digital-agency/img/logo-white.png",
+      logo2:`${ec_use_path}jng/EventCamp/images/jobsnotguns.png`,// "jng/MegaOne/digital-agency/img/logo-yellow.png",
     },
     urls:{
       home: `${location.origin}`,
@@ -76,14 +79,14 @@ export const main_data = {
         },
         flyer:{
           active: true,
-          img: "jng/MegaOne/digital-agency/img/two-chairs.png",
+          img: `${ec_use_path}jng/MegaOne/digital-agency/img/two-chairs.png`,
           active_btn: false,
           button: "Learn More",
         },
       },
       video:{
         active: true,
-        src: "jng/MegaOne/digital-agency/img/events/nov_2021/entrance_video.mp4",
+        src: `${ec_use_path}jng/MegaOne/digital-agency/img/events/nov_2021/entrance_video.mp4`,
       },
       image:{
         active: false,
@@ -118,18 +121,18 @@ export const main_data = {
         },
         flyer:{
           active: true,
-          img: "jng/MegaOne/digital-agency/img/two-more.png",
+          img: `${ec_use_path}jng/MegaOne/digital-agency/img/two-more.png`,
           active_btn: false,
           button: "Learn More",
         },
       },
       video:{
         active: false,
-        src: "jng/MegaOne/digital-agency/img/events/nov_2021/entrance_video.mp4",
+        src: `${ec_use_path}jng/MegaOne/digital-agency/img/events/nov_2021/entrance_video.mp4`,
       },
       image:{
         active: true,
-        src: "jng/MegaOne/digital-agency/img/sun-bg.png",
+        src: `${ec_use_path}jng/MegaOne/digital-agency/img/sun-bg.png`,
       }
     }
   ],
@@ -161,7 +164,7 @@ export const main_data = {
         alias: "Gun Violence Prevention",
         description: "The DC Business Gun Violence Prevention Coalition, comprised of the National Association of Minority Contractors—Washington, DC Metropolitan Area Chapter (NAMC-WMAC), Inner Thoughts, Inc., and the DC Concerned Black Business Owners was established in February 2021 to assist Mayor Bowser’s initiative “Building Blocks DC, Gun Violence Prevention Emergency Operations Center” designed to decrease gun violence in the Nation’s Capitol.",
         // image: "https://images.pexels.com/photos/4638208/pexels-photo-4638208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        image: "jng/MegaOne/digital-agency/img/pexels-sandy-torchon-4638208.jpg",
+        image: `${ec_use_path}jng/MegaOne/digital-agency/img/pexels-sandy-torchon-4638208.jpg`,
         credit: "https://www.pexels.com/photo/road-traffic-street-sign-4638208/",
         button: {
           active: true,
@@ -174,7 +177,7 @@ export const main_data = {
         alias: "NAMC-WMAC",
         description: "NAMC-WMAC  is a 501©6 non-profit organization registered in the District of Columbia in 2005 that works with Federal, State and local agencies and construction industry professionals to develop and implement programs and services designed to enhance the competitive viability of minority and women-owned businesses in the Washington, DC Metropolitan Area. Rosalind Styles, President of NAMC-WMAC serves as the lead of the Coalition and the point of contact for management, supervision and reporting of all activities during the planning, implementation and reporting of the JNG Iniatives.",
         // image: "https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        image: "jng/MegaOne/digital-agency/img/pexels-anamul-rezwan-1216544.jpg",
+        image: `${ec_use_path}jng/MegaOne/digital-agency/img/pexels-anamul-rezwan-1216544.jpg`,
         credit: "https://www.pexels.com/photo/person-holding-grinder-1216544/",
         button: {
           active: true,
@@ -187,7 +190,7 @@ export const main_data = {
         alias: "Inner Thoughts",
         description: "Inner Thoughts, Inc. established in 1981 is a 501©3 strategic planning, coordination, implementation organization, that also develops, and programs all who are aimed at finding community-based solutions to many of the social determents challenging our residents.  Pastor Doctor David J. Venable who has served as Founding Pastor of the True-Life Redemption Ministries, the redemption Church, Cathedral of Praise and currently serves as Pastor of the Cathedral of Christ.  Known as a Pastor who meets the people where they are and supports the community with food, clothing, and other supports as needed.",
         // image: "https://images.pexels.com/photos/46287/traffic-lights-road-sign-red-yellow-46287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        image: "jng/MegaOne/digital-agency/img/pexels-pixabay-46287.jpg",
+        image: `${ec_use_path}jng/MegaOne/digital-agency/img/pexels-pixabay-46287.jpg`,
         credit: "https://www.pexels.com/photo/light-road-red-yellow-46287/",
         button: {
           active: true,
@@ -200,7 +203,7 @@ export const main_data = {
         alias: "DC Black Concerned Businesses",
         description: "The DC Black Concerned Businesses was created to provide a platform for Black businesses to advocate for inclusion on the major development and construction initiatives planned in the District of Columbia. A significant number of Black businesses competing in the Certified Business Enterprise (CBE) market has been diluted without their participation being included based on race.  Although a diversity study is current underway for the first time, the Black businesses have coalesced to establish a competitive edge in the accelerated rate of economic recovery projected in the City.",
         // image: "https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        image: "jng/MegaOne/digital-agency/img/pexels-david-mcbee-730547.jpg",
+        image: `${ec_use_path}jng/MegaOne/digital-agency/img/pexels-david-mcbee-730547.jpg`,
         credit: "https://www.pexels.com/photo/bitcoins-and-u-s-dollar-bills-730547/",
         button: {
           active: true,
@@ -210,27 +213,27 @@ export const main_data = {
     ],
     images:{
       active: true,
-      pot: "jng/MegaOne/digital-agency/img/pot.png"
+      pot: `${ec_use_path}jng/MegaOne/digital-agency/img/pot.png`
     },
   },
   videos:{
     list: [
       {
         active: true,
-        poster: "jng/MegaOne/digital-agency/img/events/july_2021/fair-video-thumb2.png",
-        src: "jng/MegaOne/digital-agency/img/events/july_2021/JNGf.mp4",
+        poster: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/fair-video-thumb2.png`,
+        src: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/JNGf.mp4`,
         // src: "jng/MegaOne/digital-agency/img/events/july_2021/chief-video-thumb.png",
       },
       {
         active: false,
-        poster: "jng/MegaOne/digital-agency/img/events/july_2021/jng-promo-thumb2.png",
-        src: "jng/MegaOne/digital-agency/img/events/july_2021/job-fair-clip-1.mp4",
+        poster: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/jng-promo-thumb2.png`,
+        src: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/job-fair-clip-1.mp4`,
         // src: "jng/MegaOne/digital-agency/img/events/july_2021/chief-video-thumb.png",
       },
       {
         active: true,
-        poster: "jng/MegaOne/digital-agency/img/events/july_2021/chief-video-thumb2.png",
-        src: "jng/MegaOne/digital-agency/img/events/july_2021/job-fair-clip-2.mp4",
+        poster: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/chief-video-thumb2.png`,
+        src: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/job-fair-clip-2.mp4`,
         // src: "jng/MegaOne/digital-agency/img/events/july_2021/chief-video-thumb.png",
       },
     ],
@@ -251,7 +254,7 @@ export const main_data = {
         alias: "Goal",
         description: `The goal of the DC Business Gun Violence Prevention Coalition,  is to assist by CREATING JOBS!  The creation of the “Jobs Not Guns Employment Initiative” (herein referred to as the “JNG Initiative”) is to work with companies doing business in the District of Columbia to provide employment opportunities for District residence to participate in the transformation of our city. With potential employers and businesses working in partnership job training, vocational/apprenticeship training programs and social/supportive service providers, we can collectively create a win-win for attaining and sustaining employment of District residents that will lead to a systematic decrease in the perpetrators and recipients of gun violence in the Nation’s Capital. `,
         // image: "https://images.pexels.com/photos/4638208/pexels-photo-4638208.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        image: "jng/MegaOne/digital-agency/img/events/july_2021/yellow-jackets.png",
+        image: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/yellow-jackets.png`,
         credit: "https://www.pexels.com/photo/road-traffic-street-sign-4638208/",
         button: {
           active: false,
@@ -264,7 +267,7 @@ export const main_data = {
         alias: "Summit",
         description: `The Jobs Not Guns Employment Summit is designed to provide a citywide forum for potential employers, training providers, support/social service providers, law enforcement and elected official to meet with District residents, community stakeholders and employment agencies to address the barriers for employing District residents.  It provides an opportunity for employers to present their barriers to hiring district residents and residents to share their challenges for obtaining employment or a track for long-term career opportunities. Conducted both onsite and live-streaming, the Summit provides applicants an overview of their responsibilities to participate in job training or support programs, as needed, to achieve and maintain employment that can lead to a career.`,
         // image: "https://images.pexels.com/photos/1216544/pexels-photo-1216544.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
-        image: "jng/MegaOne/digital-agency/img/events/july_2021/shake-a-hand.png",
+        image: `${ec_use_path}jng/MegaOne/digital-agency/img/events/july_2021/shake-a-hand.png`,
         credit: "https://www.pexels.com/photo/person-holding-grinder-1216544/",
         button: {
           active: false,
@@ -283,7 +286,7 @@ export const main_data = {
         `,
         // image: "https://images.pexels.com/photos/46287/traffic-lights-road-sign-red-yellow-46287.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
         // image: "jng/MegaOne/digital-agency/img/events/nov_2021/in-the-hall.png",
-        image: "jng/MegaOne/digital-agency/img/events/nov_2021/IMGL0060-min.png",
+        image: `${ec_use_path}jng/MegaOne/digital-agency/img/events/nov_2021/IMGL0060-min.png`,
         credit: "https://www.pexels.com/photo/light-road-red-yellow-46287/",
         button: {
           active: false,
@@ -293,7 +296,7 @@ export const main_data = {
     ],
     images:{
       active: false,
-      pot: "jng/MegaOne/digital-agency/img/pot.png"
+      pot: `${ec_use_path}jng/MegaOne/digital-agency/img/pot.png`
     },
   },
   practices_og: {
@@ -337,7 +340,7 @@ export const main_data = {
     h2:"Our Creative Team",
     members:[
       {
-        src: "jng/MegaOne/digital-agency/img/styles-new2.png",
+        src: `${ec_use_path}jng/MegaOne/digital-agency/img/styles-new2.png`,
         alt: "team1",
         name: "Rosalind Styles",
         cls: "tag-team team1",
@@ -359,7 +362,7 @@ export const main_data = {
               local and minority residents and businesses.`,
       },
       {
-        src:"jng/MegaOne/digital-agency/img/dotti.png",
+        src:`${ec_use_path}jng/MegaOne/digital-agency/img/dotti.png`,
         alt:"team2",
         name:"Dotti Wade",
         cls: "tag-team team2",
@@ -423,7 +426,7 @@ export const main_data = {
     content:[
       {
         active: true,
-        img:"jng/MegaOne/digital-agency/img/blog-news-1.jpg",
+        img:`${ec_use_path}jng/MegaOne/digital-agency/img/blog-news-1.jpg`,
         // title: "Web design is fun",
         title: "Take a look at our process",
         text: "Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am",
@@ -433,14 +436,14 @@ export const main_data = {
         },
         author:{
           active: false,
-          img: "jng/MegaOne/digital-agency/img/avatar-1.png",
+          img: `${ec_use_path}jng/MegaOne/digital-agency/img/avatar-1.png`,
           name: "Hena Sword",
           href: "javascript:void(0);",
         },
       },
       {
         active: true,
-        img:"jng/MegaOne/digital-agency/img/blog-news-1.jpg",
+        img:`${ec_use_path}jng/MegaOne/digital-agency/img/blog-news-1.jpg`,
         title: "See what the press is saying.",
         text: "Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am",
         date: {
@@ -449,14 +452,14 @@ export const main_data = {
         },
         author:{
           active: false,
-          img: "jng/MegaOne/digital-agency/img/avatar-1.png",
+          img: `${ec_use_path}jng/MegaOne/digital-agency/img/avatar-1.png`,
           name: "David Villas",
           href: "javascript:void(0);",
         },
       },
       {
         active: true,
-        img:"jng/MegaOne/digital-agency/img/blog-news-1.jpg",
+        img:`${ec_use_path}jng/MegaOne/digital-agency/img/blog-news-1.jpg`,
         title: "Participate in a vibrant funding community.",
         text: "Lorem ipsum dolor sit amet consectetur adipiscing elit ipsum dolor sit am",
         date: {
@@ -465,7 +468,7 @@ export const main_data = {
         },
         author:{
           active: false,
-          img: "jng/MegaOne/digital-agency/img/avatar-1.png",
+          img: `${ec_use_path}jng/MegaOne/digital-agency/img/avatar-1.png`,
           name: "Jhon Walker",
           link: "javascript:void(0);",
         },
@@ -475,7 +478,7 @@ export const main_data = {
   events: {
     mokup:{
       active: false,
-      img: "jng/MegaOne/digital-agency/img/blog-mokeup.png",
+      img: `${ec_use_path}jng/MegaOne/digital-agency/img/blog-mokeup.png`,
     },
     img_slider: false,
     data: [
@@ -493,7 +496,7 @@ export const main_data = {
           text: "",
           href: "javascript:void(0);",
         },
-        img: "jng/MegaOne/digital-agency/img/blog-mokup-img-2.png",
+        img: `${ec_use_path}jng/MegaOne/digital-agency/img/blog-mokup-img-2.png`,
         target: "_SELF",
         // img dimensions 402 X 230
       },
@@ -521,7 +524,7 @@ export const main_data = {
         // img: "jng/MegaOne/digital-agency/img/jng-summit-draft.png",
         // img: "jng/MegaOne/digital-agency/img/jng-w1-savethedate.png",
         // img: "jng/MegaOne/digital-agency/img/jng-w1-savethedate_og.png",
-        img: "jng/MegaOne/digital-agency/img/jng-w5-savethedate-fall-2022_og.png",
+        img: `${ec_use_path}jng/MegaOne/digital-agency/img/jng-w5-savethedate-fall-2022_og.png`,
         target: "_BLANK",
       },
       {
@@ -547,7 +550,7 @@ export const main_data = {
         },
         // img: "jng/MegaOne/digital-agency/img/jng-summit-draft.png",
         // img: "jng/MegaOne/digital-agency/img/jng-w1-savethedate.png",
-        img: "jng/MegaOne/digital-agency/img/jng-w1-savethedate_og.png",
+        img: `${ec_use_path}jng/MegaOne/digital-agency/img/jng-w1-savethedate_og.png`,
         // img: "jng/MegaOne/digital-agency/img/jng-w5-savethedate-fall-2022_og.png",
         target: "_BLANK",
       },
@@ -567,11 +570,11 @@ export const main_data = {
           href: `${location.origin}/events/`,
         },
         // img: "jng/MegaOne/digital-agency/img/jng-events-img.png",
-        img: "jng/MegaOne/digital-agency/img/jng-social-flyer2.png",
+        img: `${ec_use_path}jng/MegaOne/digital-agency/img/jng-social-flyer2.png`,
         target: "_SELF",
       },
     ],
-    pot: "jng/MegaOne/digital-agency/img/pot-2.png",
+    pot: `${ec_use_path}jng/MegaOne/digital-agency/img/pot-2.png`,
   },
   countdown: {
     // NOTE: make countdown data pull from json file
@@ -590,23 +593,23 @@ export const main_data = {
     title: "Partners",
     button: "News Feed",
   list: [
-      { img: "jng/lib/images/partners/stars.png" },
-      { img: "jng/lib/images/partners/building-blocks.svg" },
-      { img: "jng/lib/images/partners/events-DC.svg" },
-      { img: "jng/lib/images/partners/DC-does.svg" },
-      { img: "jng/lib/images/partners/DFHV.svg" },
-      { img: "jng/lib/images/partners/CSOSA.png" },
-      { img: "jng/lib/images/partners/MPD2.png" },
-      { img: "jng/lib/images/partners/ACC.png" },
-      { img: "jng/lib/images/partners/pepco.svg" },
-      { img: "jng/lib/images/partners/DC-seal2.png" },
-      // { img: "jng/lib/images/partners/2.png" },
-    // { img: "jng/lib/images/sponsors/creative-graphic-unique2.png" },
-    // { img: "jng/lib/images/sponsors/graphic-design-genuine2.png" },
-    // { img: "jng/lib/images/sponsors/creative-special2.png" },
-    // { img: "jng/lib/images/sponsors/creative-design-unique2.png" },
-    // { img: "jng/lib/images/sponsors/creative-graphic2.png" },
-    // { img: "jng/lib/images/sponsors/premium2.png" },
+      { img: `${ec_use_path}jng/lib/images/partners/stars.png` },
+      { img: `${ec_use_path}jng/lib/images/partners/building-blocks.svg` },
+      { img: `${ec_use_path}jng/lib/images/partners/events-DC.svg` },
+      { img: `${ec_use_path}jng/lib/images/partners/DC-does.svg` },
+      { img: `${ec_use_path}jng/lib/images/partners/DFHV.svg` },
+      { img: `${ec_use_path}jng/lib/images/partners/CSOSA.png` },
+      { img: `${ec_use_path}jng/lib/images/partners/MPD2.png` },
+      { img: `${ec_use_path}jng/lib/images/partners/ACC.png` },
+      { img: `${ec_use_path}jng/lib/images/partners/pepco.svg` },
+      { img: `${ec_use_path}jng/lib/images/partners/DC-seal2.png` },
+      // { img: `${ec_use_path}jng/lib/images/partners/2.png` },
+    // { img: `${ec_use_path}jng/lib/images/sponsors/creative-graphic-unique2.png` },
+    // { img: `${ec_use_path}jng/lib/images/sponsors/graphic-design-genuine2.png` },
+    // { img: `${ec_use_path}jng/lib/images/sponsors/creative-special2.png` },
+    // { img: `${ec_use_path}jng/lib/images/sponsors/creative-design-unique2.png` },
+    // { img: `${ec_use_path}jng/lib/images/sponsors/creative-graphic2.png` },
+    // { img: `${ec_use_path}jng/lib/images/sponsors/premium2.png` },
   ]},
   testimony:{
     comments: [
@@ -652,7 +655,7 @@ export const main_data = {
   },
   fixed_nav:{
     images:{
-      logo:"jng/EventCamp/images/jobsnotguns.png",
+      logo:`${ec_use_path}jng/EventCamp/images/jobsnotguns.png`,
     }
   },
 }// landing_data
@@ -666,7 +669,7 @@ export const form_types = {
 
 export const form_info = {
   info: {
-    image: "jng/lib/images/jobsnotguns.png",
+    image: `${ec_use_path}jng/lib/images/jobsnotguns.png`,
     title: "East Of The River Recruitment Fair",
     sub: "(please select and submit only one form)",
     date: "Friday, November 19, 2021",

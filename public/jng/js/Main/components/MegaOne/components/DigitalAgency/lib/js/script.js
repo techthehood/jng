@@ -107,7 +107,13 @@ jQuery(function ($) {
       WOW Animation
    ====================================== */
 
-    if ($(window).width() > 991) {
+    if (0 && $(window).width() > 991) {
+      console.log(`[script.js] adding wow`);
+      /**
+       * i think this is supposed to initiate a more robust version complete with nav arrows (for desktop)
+       * but this section isn't loading correctly
+       */
+
         var wow = new WOW({
             boxClass: 'wow',
             animateClass: 'animated',
@@ -116,6 +122,8 @@ jQuery(function ($) {
             live: true
         });
         new WOW().init();
+    }else{
+      console.log(`[script.js] no wow`);
     }
 
 

@@ -40,9 +40,26 @@
 
   <!-- .Footer -->
 
+  <script>
+    try {
+      // if its running from the server auto load site specific paths unless force_cdn
+      // if its running this hbs view, load cdn paths
+      if(1) console.log(`[jng.hbs] force_cdn`, {{{ force_cdn }}});
+
+      if({{{ force_cdn }}}){
+        window['FILE_SRC'] = "cdn";
+      }else{
+        window['FILE_SRC'] = "locals";//its a string
+      }
+
+    } catch (e) {
+      window['FILE_SRC'] = "locals";//its a string
+    }
+  </script>
   <!-- attach JavaScripts --> 
   {{>(bundle 'bundle_js' production)}}
   {{!-- {{>"MegaOne_DigitalAgency_js"}} --}}
+
 </body>
 
 </html>

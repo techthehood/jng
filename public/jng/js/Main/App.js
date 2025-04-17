@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom';
 
 import "../../MegaOne/vendor/js/bundle.min.js";// WORKS (GOTCHA: breaks with no jquery without it)
-// import "../../MegaOne/vendor/js/wow.min.js";// what does this button do?
+import "../../MegaOne/vendor/js/wow.min.js";// what does this button do? - create team slider
 
 // import * as line from "../../MegaOne/vendor/css/LineIcons.min.css";
 // import * as css from "../../MegaOne/vendor/css/bundle.min.css";

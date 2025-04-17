@@ -12,6 +12,10 @@ $mp: !important;
     h3{color: var(--main-secondary-color) $mp;}
   }
 }
+%btn{
+  color: #000;
+  font-weight: bold;
+}
 
 .Promo{
   section{
@@ -66,11 +70,13 @@ $mp: !important;
   &.light{
     @extend %light;
   }
-  .btn1{background-color: var(--main-secondary-color);}
+  .btn1{
+    @extend %btn;
+    background-color: var(--main-secondary-color);
+  }
   .btn2{
+    @extend %btn;
     background-color: var(--main-site-color); 
-    color: #000; 
-    font-weight: bold;
     &:hover{background-color: var(--main-site-color-dark);}
   }
 }

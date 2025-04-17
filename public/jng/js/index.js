@@ -8,7 +8,7 @@ import Archives from './elements/Archives/Archives';
 
 import Events from './Events';
 import ErrorBoundary from './Error';
-import { NOV_EVT_PATH, MAIN_PATH, EVENTS_PATH, CONFIRM_PATH, ARTICLE_PATH } from './paths/'
+import { NOV_EVT_PATH, MAIN_PATH, EVENTS_PATH, CONFIRM_PATH, ARTICLE_PATH, CDN_PATH } from './paths/'
 import MainMenu from './elements/MainMenu';
 import Confirm from './Events/Confirm';
 import Articles from './elements/Articles/Articles';
@@ -16,6 +16,18 @@ import Articles from './elements/Articles/Articles';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const root = document.querySelector('.root');
+
+// DEPRECATED - not using multiple variable interpolation ISSUE with the space character
+// window[`CDN_PATH`] = CDN_PATH;// NOTE: has no trailing slash
+// if(typeof FILE_SRC == "undefined" || FILE_SRC == "cdn"){
+//   // document.documentElement.style.setProperty("--img_root", CDN_PATH);
+
+//   let dE = getComputedStyle(document.documentElement);
+//   // let monument = dE.getPropertyValue("--monument");// still has extra characters
+//   let monument = dE.getPropertyValue("--monument").replace(/"/g, "").trim();// WORKS
+
+//   console.log(`[jng][index.js] monument`, monument);
+// }
 
 ReactDOM.render(
   <ErrorBoundary>

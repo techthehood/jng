@@ -1,3 +1,4 @@
+import { CDN_PATH } from '../paths/'
 export const date = "Friday, November 19, 2021 11:00:00";
 
 const menu_array = [{ title: "Speakers", href: "Speakers" }, { title: "Schedule", href: "conference" }, { title: "About", href: "about" }, { title:"Partners", href:"Partners"}, { title:"Testimonial", href:"Testimonial"}, { title:"Contacts", href:"Contacts"}];
@@ -8,12 +9,14 @@ const social = {
   LINKEDIN: { title: "linkedin", url: "" },
 }
 
+const ec_use_path = typeof FILE_SRC == "undefined" || FILE_SRC == "cdn" ? `${CDN_PATH}/` : "";
+
 export const landing_data = {
   hero: {
     // title_bold: "Jobs",
     // title: "Not Guns",
     // sub: "East of the River Recruitment Fair",
-    image: "jng/EventCamp/images/jobsnotguns.png",
+    image: `${ec_use_path}jng/EventCamp/images/jobsnotguns.png`,
     title_bold: "East of the River ",
     title: "Recruitment Fair",
     day: "19",
@@ -55,16 +58,16 @@ export const landing_data = {
     title: "Partners",
     button: "News Feed",
   list: [
-      { img: "jng/EventCamp/images/partners/stars.png" },
-      { img: "jng/EventCamp/images/partners/building-blocks.svg" },
-      { img: "jng/EventCamp/images/partners/events-DC.svg" },
-      { img: "jng/EventCamp/images/partners/DC-does.svg" },
-      { img: "jng/EventCamp/images/partners/DFHV.svg" },
-      { img: "jng/EventCamp/images/partners/CSOSA.png" },
-      { img: "jng/EventCamp/images/partners/MPD2.png" },
-      { img: "jng/EventCamp/images/partners/ACC.png" },
-      { img: "jng/EventCamp/images/partners/pepco.svg" },
-      { img: "jng/EventCamp/images/partners/DC-seal2.png" },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/stars.png` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/building-blocks.svg` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/events-DC.svg` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/DC-does.svg` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/DFHV.svg` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/CSOSA.png` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/MPD2.png` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/ACC.png` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/pepco.svg` },
+      { img: `${ec_use_path}jng/EventCamp/images/partners/DC-seal2.png` },
       // { img: "jng/EventCamp/images/partners/2.png" },
     // { img: "jng/EventCamp/images/sponsors/creative-graphic-unique2.png" },
     // { img: "jng/EventCamp/images/sponsors/graphic-design-genuine2.png" },
@@ -131,7 +134,7 @@ export const form_types = {
 
 export const form_info = {
   info: {
-    image: "jng/EventCamp/images/jobsnotguns.png",
+    image: `${ec_use_path}jng/EventCamp/images/jobsnotguns.png`,
     title: "East Of The River Recruitment Fair",
     sub: "(please select and submit only one form)",
     date: "Friday, November 19, 2021",

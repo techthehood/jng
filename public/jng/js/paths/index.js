@@ -9,6 +9,7 @@ export const DASHBOARD_PATH = '/dashboard';
 export const SUCCESS_PATH = "/";// LOGIN_SUCCESS_REDIRECT
 export const CONFIRM_PATH = '/confirm';
 export const ARTICLE_PATH = '/articles/:article';
+export const CDN_PATH = 'https://cdn.jsdelivr.net/gh/techthehood/jng@main/public'
 // export const CORE_PATH = '/core';// why did i comment this out? because redirecty to core this way tries to nav to a page controlled by
 // this react router which the actual core is not.
 

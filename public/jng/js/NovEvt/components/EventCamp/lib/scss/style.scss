@@ -39,10 +39,42 @@ Version:	1.0
 	13. Footer / footer
 	14. Back to Top / #back-to-top
 -------------------------------------------------------------------*/
+@import "../../../../../scss/globals.scss";
 @import "../css/font.css";
 /*------------------------------------------------------------------
 [1. Body ]
 */
+$mp: !important;
+
+:root{
+
+  // [Use a Sass variable inside a string with Interpolation](https://martinwolf.org/before-2018/blog/2014/08/use-a-sass-variable-inside-a-string-with-interpolation/)
+
+  --ne_monument: '/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png?file=style';
+  // --ne_monument_cdn: 'https://cdn.jsdelivr.net/gh/techthehood/jng@main/public/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png?file=main';
+  --ne_monument_cdn: '#{$cdn_path}/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png?file=style';// WORKS
+
+  --ne_menu: "/jng/EventCamp/images/menu.jpg";
+  --ne_menu_cdn: "#{$cdn_path}/jng/EventCamp/images/menu.jpg";// ISSUE - needs upload
+
+  --ne_about: "/jng/EventCamp/images/about-us-banner.png";
+  --ne_about_cdn: "#{$cdn_path}/jng/EventCamp/images/about-us-banner.png";// ISSUE - needs upload
+
+  --ne_sponsors: "/jng/EventCamp/images/sponsers-banner.jpg";
+  --ne_sponsors_cdn: "#{$cdn_path}/jng/EventCamp/images/sponsers-banner.jpg";// DEPRECATED
+
+  --ne_testimonial: "/jng/EventCamp/images/testimonial-bg.jpg";
+  --ne_testimonial_cdn: "#{$cdn_path}/jng/EventCamp/images/testimonial-bg.jpg";// DEPRECATED
+
+}
+
+@mixin bGI($var){
+  background-image: image-set(var($var));
+  background: image-set(var($var)) no-repeat center center fixed;
+}
+
+
+
 *{transition:all 0.5s ease;outline:none;}
 html, body{height:100%;width:100%;color:#fff;}
 h1, h2, h3, h4, h6{font-family:RobotoSlab-Thin;margin:20px 0}
@@ -80,7 +112,26 @@ section{padding:135px 0;}
 */
 .banner-title{display:inline-block;text-align:center;vertical-align:middle;width:100%;}
 .banner-title h1{padding:0;color:#f25421;text-transform:uppercase;}
-#NovEvt-home{background:url("/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png") no-repeat center center fixed;display:table;height:100%;padding-top:146px;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-bottom:0}
+// #NovEvt-home{background:url("/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png?file=style") no-repeat center center fixed;display:table;height:100%;padding-top:146px;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-bottom:0}
+// #NovEvt-home{content: var(--monument); background:--monument no-repeat center center fixed;display:table;height:100%;padding-top:146px;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-bottom:0}// FAILS
+
+#NovEvt-home{
+  @include bGI(--ne_monument);// default
+  &.cdn{
+    @include bGI(--ne_monument_cdn);
+  }
+    display:table;
+    height:100%;
+    padding-top:146px;
+    position:relative;
+    width:100%;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    padding-bottom:0;
+}
+// url("/jng/EventCamp/images/Photo-of-Washington-Monument-During-Evening.png?file=style")
 #NovEvt-home.inner-page{background:rgba(0, 0, 0, 0) url("/jng/EventCamp/images/inner-page-banner.jpg") no-repeat center top / cover;padding-top:75px;height:auto;}
 #NovEvt-home.inner-page nav.main-menu{background:#131414}
 #NovEvt-home.inner-page .banner-title h1{font-size:36px;padding:5px 0 65px;}
@@ -148,7 +199,18 @@ section{padding:135px 0;}
 .drawer-menu .sub-menu{display:none;}
 .drawer-menu .sub-menu li,.nav.navbar-nav ul.sub-menu li{display:inline-block;width:100%;border-bottom: 1px solid rgba(255, 255, 255, 0.1);transition: all 0s ease; }
 .drawer-menu .sub-menu li:last-child,.nav.navbar-nav ul.sub-menu li:last-child{border-bottom: none;}
-.drawer .header-left{padding:60px 0;text-align:center;width:100%;background:rgba(0, 0, 0, 0) url("/jng/EventCamp/images/menu.jpg") no-repeat fixed center center;}
+// .drawer .header-left{padding:60px 0;text-align:center;width:100%;background:rgba(0, 0, 0, 0) url("/jng/EventCamp/images/menu.jpg") no-repeat fixed center center;}
+.drawer .header-left {
+  padding: 60px 0;
+  text-align: center;
+  width: 100%;
+  // background: url("/jng/EventCamp/images/menu.jpg") no-repeat fixed center center;
+  @include bGI(--ne_menu);// default
+  &.cdn{
+    @include bGI(--ne_menu_cdn);
+  }
+  background-color:  rgba(0, 0, 0, 0) $mp;
+}
 .drawer-menu .sub-menu li a,.nav.navbar-nav ul.sub-menu li a{padding:10px 30px;text-align:left;display:inline-block;width:100%;color:#fff;transition: all 0s ease; }
 .arrow-down{width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:5px solid #fff;position:absolute;right:10px;bottom:16px;}
 .drawer-menu ul.sub-menu li a:hover, .drawer-menu ul.sub-menu li a:active,.drawer-menu ul.sub-menu li a:focus, .nav.navbar-nav ul.sub-menu li a:hover,.nav.navbar-nav ul.sub-menu li a:active,.nav.navbar-nav ul.sub-menu li a:focus{color:#ffffff;background:rgb(242, 84, 33);text-decoration:none;}
@@ -171,7 +233,7 @@ section{padding:135px 0;}
 .count-down .count-day{border-right:1px solid #f68864;display:inline-block;margin:50px 0 40px 0;width:20%}
 .count-down .count-day:last-child{border-right:none !important}
 .count-down .count-day .count-number{border-bottom:1px solid #f68864;display:inline-block;font-family:"Montserrat-ExtraBold";font-size:60px;padding:28px 45px 10px 45px;text-align:center;width:100%;}
-.count-down .count-day .count-label{display:inline-block;font-family:"Montserrat-Light";font-size:24px;padding:28px 45px;text-align:center;text-transform:uppercase;width:100%;}
+.count-down .count-day .count-label{display:inline-block;font-family:"Montserrat-Light";font-size:24px;padding:28px 45px;text-align:center;text-transform:uppercase;/*width:100%;*/}
 .count-down-description{font-family:"Montserrat-Medium";font-size:20px;padding:0 80px;}
 .count-down .register-now-btn{border:1px solid #fff;background-color:#fff;width:300px;color:#f25421;margin-top:30px}
 .count-down .register-now-btn i{color:#f25421}
@@ -180,7 +242,21 @@ section{padding:135px 0;}
 /*------------------------------------------------------------------
 [4. About / #about ]
 */
-#about{background:url("/jng/EventCamp/images/about-us-banner.png") no-repeat center center fixed;display:table;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+// #about{background:url("/jng/EventCamp/images/about-us-banner.png") no-repeat center center fixed;display:table;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+#about {
+  // background: url("/jng/EventCamp/images/about-us-banner.png") no-repeat center center fixed;
+  @include bGI(--ne_about);// default
+  &.cdn{
+    @include bGI(--ne_about_cdn);
+  }
+  display: table;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover $mp;
+}
 .about-us{padding:135px 0}
 .about-us h3{font-family:'Montserrat-SemiBold';font-size:26px;margin-bottom:45px;}
 .about-us p{font-family:'Montserrat-Light';font-size:16px;line-height:30px;}
@@ -381,11 +457,25 @@ h3.ts-title{font-weight:400!important;font-family:Poppins,sans-serif!important}
 /*------------------------------------------------------------------
 [7. Sponsors / .sponsors ]
 */
-.sponsors{background:url("/jng/EventCamp/images/sponsers-banner.jpg") no-repeat center center fixed;display:table;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+// .sponsors{background:url("/jng/EventCamp/images/sponsers-banner.jpg") no-repeat center center fixed;display:table;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+.sponsors {
+  // background: url("/jng/EventCamp/images/sponsers-banner.jpg") no-repeat center center fixed;
+  @include bGI(--ne_sponsors);// default
+  &.cdn{
+    @include bGI(--ne_sponsors_cdn);
+  }
+  display: table;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover $mp;
+}
 .sponsors{padding:135px 0}
 .sponsors h2.block-title{color:#f25421;font-family:"RobotoSlab-Thin";font-size:60px;margin-bottom:70px;text-align:center;text-transform:uppercase;}
 .sponsors p.block-title strong{font-family:'RobotoSlab-Bold'}
-.sponsors .sponsors-logo{border-bottom:1px solid #2f3132;display:inline-block;width:100%}
+.sponsors .sponsors-logo{border-bottom:1px solid #2f3132;display:inline-block;width:100%; display: flex;}
 .sponsors .sponsors-logo .logo-item{border-right:1px solid #2f3132;text-align:center;padding:30px 0}
 .sponsors .sponsors-logo:last-child{margin-top:-4px;border:none;}
 .sponsors .sponsors-logo .logo-item:last-child{border:none;}
@@ -536,7 +626,25 @@ h3.ts-title{font-weight:400!important;font-family:Poppins,sans-serif!important}
 /*------------------------------------------------------------------
 [9.1 Testiominals ( Full Width ) / .testiominals.full-width ]
 */
-.testiominals.full-width{background:url("/jng/EventCamp/images/testimonial-bg.jpg") no-repeat center center fixed;display:table;height:100%;padding:135px 0 !important;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-bottom:0}
+// .testiominals.full-width{background:url("/jng/EventCamp/images/testimonial-bg.jpg") no-repeat center center fixed;display:table;height:100%;padding:135px 0 !important;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;padding-bottom:0}
+.testiominals.full-width {
+  // NOTE: not using testimonials
+  // background: url("/jng/EventCamp/images/testimonial-bg.jpg") no-repeat center center fixed;
+  @include bGI(--ne_testimonial);// default
+  &.cdn{
+    @include bGI(--ne_testimonial_cdn);
+  }
+  display: table;
+  height: 100%;
+  padding: 135px 0 !important;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 0
+}
 .testiominals.full-width .column{color:#fff}
 .testiominals.full-width .owl-testimonial-2{}
 .testiominals.full-width .owl-testimonial-2 .inner-testimonial .tm-tagline{border-bottom:1px solid #2f2f2f;padding-left:30px;}
@@ -572,7 +680,18 @@ h3.ts-title{font-weight:400!important;font-family:Poppins,sans-serif!important}
 /*------------------------------------------------------------------
 [10. Subscribe / .subscribe ]
 */
-#subscribe{background:url("/jng/EventCamp/images/subscribe-banner.jpg") no-repeat center center fixed;display:table;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+// #subscribe{background:url("/jng/EventCamp/images/subscribe-banner.jpg") no-repeat center center fixed;display:table;position:relative;width:100%;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;}
+#subscribe {
+  // NOTE: not using subscribe
+  background: url("/jng/EventCamp/images/subscribe-banner.jpg") no-repeat center center fixed;
+  display: table;
+  position: relative;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 .subscribe{text-align:center;}
 .subscribe h2.block-title{color:#fff;text-align:center;}
 .subscribe .form-control{background:transparent;border:none;border-bottom:1px solid #fff;font-family:'Montserrat-Light';font-size:20px;padding-bottom:10px;padding-bottom:15px;height:auto;}

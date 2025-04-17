@@ -1,3 +1,4 @@
+import { CDN_PATH } from '../../paths/'
 import React from 'react';
 import './MainMenu.scss';
 
@@ -9,6 +10,8 @@ const MainMenu = (props) => {
     fixed = false,
     ...rest
   } = props;
+
+  const use_path = typeof FILE_SRC == "undefined" || FILE_SRC == "cdn" ? `${CDN_PATH}/` : "";
 
   let fixed_cls = fixed ? "fixed" : "";
   return (
@@ -34,7 +37,7 @@ const MainMenu = (props) => {
       <div className={`menu-container sticky-shrinknav-menu ${fixed_cls}`}>
         {/* {{!-- <div className="brand-title color-white">BusinessTech</div> --}} */}
         <a href={location.origin} className="brand-title color-white">
-          <img src="jng/EventCamp/images/jobsnotguns.png" />
+          <img src={`${use_path}jng/EventCamp/images/jobsnotguns.png`} />
         </a>
         <button className="menu-icon offCanvas-menu-icon m-20px" type="button" data-toggle="offcanvas-full-screen"></button>
         <ul className="menu align-center">

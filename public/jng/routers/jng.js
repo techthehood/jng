@@ -70,6 +70,7 @@ const corsOptions = require('../../../utils/cors-options.js');
       title: 'Rocket',
       name: 'Author Name',
       use_local_files: keys.use_local_files,
+      force_cdn: true,
       production,// works
     })
   });

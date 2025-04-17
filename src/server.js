@@ -77,6 +77,16 @@ hbs.registerHelper('bundle', function (name, prod = false) {
   return (in_production) ? `${name}_prod` : `${name}_dev`;
 });
 
+hbs.registerHelper('json', function(context) {
+  // why stringify the data?
+    let data_str = JSON.stringify(context);
+    return JSON.stringify(data_str);
+    /**
+      * usage:
+      * window['HOST_DATA'] = JSON.parse({{{json data}}});//its a string
+      */
+});
+
 hbs.registerHelper('is_first', function (ndx) {
   return ndx == 0;
 });

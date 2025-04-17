@@ -22,17 +22,6 @@ eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceM
 
 /***/ }),
 
-/***/ "./js/NovEvt/components/EventCamp/lib/css/font-awesome.min.css":
-/*!*********************************************************************!*\
-  !*** ./js/NovEvt/components/EventCamp/lib/css/font-awesome.min.css ***!
-  \*********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-eval("// extracted by mini-css-extract-plugin//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9qcy9Ob3ZFdnQvY29tcG9uZW50cy9FdmVudENhbXAvbGliL2Nzcy9mb250LWF3ZXNvbWUubWluLmNzcy5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL2pzL05vdkV2dC9jb21wb25lbnRzL0V2ZW50Q2FtcC9saWIvY3NzL2ZvbnQtYXdlc29tZS5taW4uY3NzP2RmOWMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gZXh0cmFjdGVkIGJ5IG1pbmktY3NzLWV4dHJhY3QtcGx1Z2luIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///./js/NovEvt/components/EventCamp/lib/css/font-awesome.min.css\n");
-
-/***/ }),
-
 /***/ "./js/NovEvt/components/EventCamp/lib/css/owl.carousel.css":
 /*!*****************************************************************!*\
   !*** ./js/NovEvt/components/EventCamp/lib/css/owl.carousel.css ***!

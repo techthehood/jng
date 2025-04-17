@@ -62,6 +62,10 @@ $mp: !important;
           color: var(--main-color);
       }
     }
+
+    .navbar.main-menu{
+      display: none;
+    }
   
     .main-menu{ 
       .navbar-nav > li > a{
@@ -91,12 +95,12 @@ $mp: !important;
   }// home
 
   @include media.xxl{
-    #home{
+    #NovEvt-home{
       padding-top: 3rem;
       .hero-image{  margin: 0 auto 2rem; width:53%; img{/*width: 30%;*/}  }
       .banner-title h1 {font-size: 2.2rem;  margin-bottom: .5rem;}
       .event-schedule {    margin: 2rem 50px; padding: unset;}
-      .event-description { font-size: 1.5rem; margin: 1rem 15%;}
+      .event-description { font-size: 1.5rem; margin: 1rem auto; width: 61%;}
       .register-now-section { margin: 2rem; a{padding: 1rem;}}
     }
   }

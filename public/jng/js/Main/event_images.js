@@ -1,4 +1,8 @@
-const img_url = `jng/MegaOne/digital-agency/img/events`
+import { CDN_PATH } from '../paths/';
+
+const ec_use_path = typeof FILE_SRC == "undefined" || FILE_SRC == "cdn" ? `${CDN_PATH}/` : "";
+
+const img_url = `${ec_use_path}jng/MegaOne/digital-agency/img/events`
 const july22_url = `${img_url}/july_2022`;
 const nov21_url = `${img_url}/nov_2021`;
 const july21_url = `${img_url}/july_2021`;

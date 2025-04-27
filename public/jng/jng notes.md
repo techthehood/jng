@@ -102,3 +102,23 @@ targeting a directory
   git add <directory_name>
 ```
 > you can also cd into the directory and use git add --all (see above)
+
+#### Add to html (CDN build)   
+
+```
+<!-- vendor CDN's -->
+<script type="text/javascript" src="https://unpkg.com/react@16.12.0/umd/react.development.js" ></script>
+<script type="text/javascript" src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js" ></script>
+
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<!-- required DOM elements -->
+<div class="modal_home"></div>
+<div class="root"></div>
+<div class="deferMe"></div>
+
+<!-- bundle scripts -->
+
+
+```

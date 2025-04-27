@@ -51,8 +51,8 @@ module.exports = {
   },
   externals: {
     /* @ comment out externals for/to create DynamicCdnWebpackPlugin scripts in ./dist/index.html file */
-    // 'react': 'React',
-    // 'react-dom': 'ReactDOM',
+    'react': 'React',
+    'react-dom': 'ReactDOM',
     // 'mobx': 'mobx',
     // 'axios': 'axios',
     // 'swiper':'Swiper',
@@ -84,9 +84,12 @@ module.exports = {
       jQuery : "jquery",*/
       // React : "React",// i think these are written incorrectly
       // ReactDOM : "ReactDOM",// i think these are written incorrectly
-      React: "react",
-      ReactDOM: "react-dom",
+      // React: "react",
+      // ReactDOM: "react-dom",
+      axios: "axios",
       bootstrap: "bootstrap",
+      linkify: "linkifyjs",
+      // swiper: "swiper",
       // Swiper: "swiper",
       test:path.join(__dirname,'js','lib','test.js')/* this works */,
       test2:path.join(__dirname,'js','lib','test2.js')/* this works */

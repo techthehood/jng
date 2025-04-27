@@ -1,3 +1,4 @@
+import React from 'react';
 import {useRef, useState, useEffect} from "react";
 import ReactDOM from "react-dom";
 
@@ -8,6 +9,7 @@ import htmlContent from './Banner.hbs';// works as template fn
 import Hero from '../Hero';
 
 // Import Swiper React components
+// import Swiper from 'swiper';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import SwiperCore, { Navigation, EffectFade, Pagination, Autoplay } from 'swiper';
 

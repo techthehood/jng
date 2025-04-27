@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 
 import "../../NovEvt/components/EventCamp/lib/css/font-awesome.min.css";
 // import "../../NovEvt/components/EventCamp/lib/css/bootstrap.min.css";

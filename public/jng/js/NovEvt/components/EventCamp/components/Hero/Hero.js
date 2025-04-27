@@ -1,5 +1,5 @@
-// import React from "react";
-// import ReactDOM from "react-dom";
+import React from "react";
+import ReactDOM from "react-dom";
 // import Handlebars from "handlebars";
 
 import "../../lib/scss/jng.scss";

@@ -1,4 +1,4 @@
-// import ReactDOM from "react-dom";// it seems to already have the reference
+import ReactDOM from "react-dom";// it seems to already have the reference
 console.log("[alight modal]");
 require("./modal.scss");
 

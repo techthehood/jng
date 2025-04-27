@@ -1,5 +1,6 @@
 
-  import React, { Component, createRef } from 'react';//needed for React.Component
+  import React from "react";
+  import { Component, createRef } from 'react';//needed for React.Component
   import Exporter from '../Exporter';
   require('./snapper.scss');
   // const {bboy} = require('../../../../../tools/stringMe.js');

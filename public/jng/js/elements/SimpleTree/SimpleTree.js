@@ -29,7 +29,7 @@ const SimpleTree = (props) => {
   let lft_cls = image || description ? "left_display" : ""
 
   let inner = url ? (
-    <a href="" className={`sTree_link ${lft_cls}`} href={url} target="_blank">
+    <a className={`sTree_link ${lft_cls}`} href={url} target="_blank">
       {content_els}
     </a>
   ) : <div className={`sTree_link ${lft_cls}`} onClick={(e) => {

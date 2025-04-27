@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 // import "../../../lib/vendor/css/bundle.min.css";
 // import "../../../lib/vendor/css/LineIcons.min.css";
 import "../../../lib/vendor/css/revolution-settings.min.css";

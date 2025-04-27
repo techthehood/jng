@@ -8,6 +8,7 @@ import "./Slider.scss";
 // import Hero from '../Hero';
 
 // Import Swiper React components
+// import Swiper from 'swiper';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import SwiperCore, { Navigation, EffectFade, Pagination, Autoplay } from 'swiper';
 
@@ -16,12 +17,13 @@ import "./Slider.scss";
  * [How to use Swiper js for beginners with react js](https://bestofreactjs.com/repo/coderboy-raiyan-Swiper-js-guidline-react-miscellaneous);
  * not a fully finished example - the autoplay is implied 
  * to use it add autoplay to SwiperCore.use and then add autoplay to the Swiper component attributes
+ * i don't want to use swiper react, i just want to use a version similar to the CDN version
  */
 
 // Import Swiper styles
 // import 'swiper/swiper-bundle.min.css'
 // import 'swiper/swiper.min.css';// works
-// [](https://stackoverflow.com/questions/69154197/module-not-found-cant-resolve-swiper-css)
+// [Module not found: Can't resolve 'swiper/css'](https://stackoverflow.com/questions/69154197/module-not-found-cant-resolve-swiper-css)
 
 const display_console = false;
 

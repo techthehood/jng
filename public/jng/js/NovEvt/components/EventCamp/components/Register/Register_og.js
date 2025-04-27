@@ -1,4 +1,5 @@
-import React, {useContext, useRef, useEffect} from 'react';
+import React from "react";
+import {useContext, useRef, useEffect} from 'react';
 import { observer } from 'mobx-react';
 
 import Modal from '../Modal';

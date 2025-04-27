@@ -1,4 +1,5 @@
-import React, {useRef, useEffect} from 'react';
+import React from "react";
+import {useRef, useEffect} from 'react';
 import ProfileIcon from '../../ProfileIcon';
 import QRBtn from '../../QRCoder/QRBtn';
 

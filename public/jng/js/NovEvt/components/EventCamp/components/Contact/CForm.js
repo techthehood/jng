@@ -1,4 +1,5 @@
-import React, {useEffect, useRef} from 'react';
+import React from "react";
+import {useEffect, useRef} from 'react';
 require("./CForm.scss");
 const dev_mode = false;
 

@@ -14,6 +14,7 @@ const DelayDefer = () => {
 
     let DeferMe = getDeferMe['DeferMe'];
 
+    // can i run this in a function?
     ReactDOM.render(
       <Suspense fallback={<div className="loader_modal w3-modal active"><div className="loader">Loading...</div></div>} >
         <DeferMe />

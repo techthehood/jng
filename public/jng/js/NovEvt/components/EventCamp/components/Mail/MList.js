@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from "react";
+import { useState } from 'react';
 import { observer } from 'mobx-react';
 import { MjmlSection, MjmlColumn, MjmlText } from '@luma-team/mjml-react';
 import { exists } from '../../../../../tools/exists';

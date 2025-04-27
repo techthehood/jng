@@ -1,9 +1,12 @@
+import React from 'react';
 import {useRef, useState, useEffect} from "react";
+// const {useRef, useState, useEffect} = React;
 import ReactDOM from "react-dom";
 import { useInView } from "react-intersection-observer";
 // [react-intersection-observer](https://www.npmjs.com/package/react-intersection-observer)
 
 // Import Swiper React components
+// import Swiper from 'swiper';
 // import { Swiper, SwiperSlide } from 'swiper/react';
 // import SwiperCore, { Navigation, EffectFade, /*EffectCards,*/ Pagination, Autoplay } from 'swiper';
 

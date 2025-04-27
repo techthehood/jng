@@ -1,4 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+// import { useEffect } from 'react';
+const { useEffect } = React;
 import ReactDOM from 'react-dom';
 
 import "../../MegaOne/vendor/js/bundle.min.js";// WORKS (GOTCHA: breaks with no jquery without it)
@@ -22,6 +24,14 @@ require('./main.scss');
 const App = () => {
 
   const store = mainStore;
+
+  useEffect(() => {
+    console.log(`[App] useEffect works`)
+    return () => {
+      
+    }
+  }, [])
+  
 
   const registration = (params) => {
     ReactDOM.render(
@@ -63,6 +73,7 @@ const App = () => {
     //   entry.addEventListener('click', bioList);
     // })
 
+    console.log(`[App] axios`, axios);
 
     return () => {
       // cleanup

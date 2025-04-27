@@ -1,8 +1,8 @@
 
   import { useState, useRef, useMemo, useEffect } from 'react';
   // import MasterImage from '../../../../../../core/d3po_ITKR/src/app.d3po_ITKR';
-  import MasterImage from '@sunzao/d3po_itkr';
-  import '@sunzao/d3po_itkr/d3po_ITK.css'
+  // import MasterImage from '@sunzao/d3po_itkr';
+  // import '@sunzao/d3po_itkr/d3po_ITK.css'
 
   // console.log("info_icon ready");
 
@@ -222,7 +222,7 @@
 
     let use_callback = (exists(callback)) ? callback : (exists(deep_dive) && typeof deep_dive != "boolean") ? deep_dive : go_to_profile;
 
-    if (accept_image) {
+    if (/*accept_image*/ 0) {
 
       let my_icon_str = name + "_icon_img";
       let my_scale = (icon_image.includes("flame.png")) ? 1 : 2;
@@ -278,7 +278,7 @@
       // master_image = useMemo(() => <MasterImage data={img_data} />,[img_data]);
 
       // this FIX: the hook render GOTCHA: "Uncaught Error: Rendered fewer hooks than expected. This may be caused by an accidental early return statement in React Hooks"
-      master_image = <MasterImage data={img_data} />;
+      // master_image = <MasterImage data={img_data} />;
     }// accept_image
 
   return (

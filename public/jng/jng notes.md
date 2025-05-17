@@ -1,14 +1,38 @@
 # jng notes
 
+## webpack requirements
+1. node: jng webpack running on node 16.20.2   
+```
+  nvm use 16
+```
+react: jng react running on 16.9.0
+ReactDOM.render WORKS in this build  
+
+2. tools/use_root.js
+- comment out vite script uncomment webpack script
+
+3. rename public index.html (used by vite)
+
+
 ### Articles
 [How to include bootstrap css and js in reactjs app?](https://stackoverflow.com/questions/40037657/how-to-include-bootstrap-css-and-js-in-reactjs-app)   
 [git add recursively | Google search](https://www.google.com/search?q=git+add+recursive&sca_esv=23fc8e95f4db8408&ei=UzzwZ6mvC6iq5NoPyLat0Q4&oq=git+add+re&gs_lp=Egxnd3Mtd2l6LXNlcnAiCmdpdCBhZGQgcmUqAggAMgoQABiABBhDGIoFMggQABiABBixAzIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAEMgUQABiABDIFEAAYgAQyBRAAGIAESOksUIAUWNIdcAR4AZABAJgBV6AB8ASqAQIxMLgBAcgBAPgBAZgCDqACqAbCAgoQABiwAxjWBBhHwgINEAAYgAQYsAMYQxiKBcICCxAAGIAEGLEDGIMBwgIREC4YgAQYsQMY0QMYgwEYxwHCAhAQABiABBixAxhDGIMBGIoFwgILEC4YgAQY0QMYxwHCAg4QLhiABBixAxiDARiKBcICCxAAGIAEGJECGIoFwgIOEC4YgAQYsQMY0QMYxwHCAgsQLhiABBixAxiDAcICDRAAGIAEGLEDGEMYigWYAwCIBgGQBgqSBwIxNKAHikayBwIxMLgHrQU&sclient=gws-wiz-serp)   
 
 ### Steps to convert to a Production build
 
-1. change the production variable to true   
+1. change the production variable to true  
+> jng/routers/jng
+```
+  const production = true;
+``` 
+
 2. run the webpack production build
+```
+  nrb
+```
+> vs nrd (dev build)
 3. copy the script and link elements from dist/index.html and paste them into the appropriate production views
+
 
 #### 1. change the production variable to true   
 
@@ -105,13 +129,13 @@ targeting a directory
 
 #### Add to html (CDN build)   
 
-```
+```html
 <!-- vendor CDN's -->
 <script type="text/javascript" src="https://unpkg.com/react@16.12.0/umd/react.development.js" ></script>
 <script type="text/javascript" src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js" ></script>
 
-<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@8.4.7/swiper-bundle.min.js"></script>
 
 <!-- required DOM elements -->
 <div class="modal_home"></div>
@@ -121,4 +145,44 @@ targeting a directory
 <!-- bundle scripts -->
 
 
+```
+
+
+- also add
+```html
+  <!-- link contains all spinner styling and animations  -->
+  <link href="https://cdn.jsdelivr.net/gh/profile/repository@main/jng/MegaOne/digital-agency/css/style.css" rel="stylesheet">
+  <style>
+    .Loader{
+
+      .loader {
+        height: 100%;
+        width: 100%;
+        position: fixed;
+        overflow: hidden;
+        z-index: 11111111;
+        background: #FFFFFF;
+      }
+      .hide{display: none !important;}
+    }
+  </style>
+  <!--hbs loader-->
+  <div class="loader center-block" data-comp="Loader">
+    <div class="spinner">
+      <div class="spinner-container container1">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="spinner-container container2">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+      </div>
+  
+    </div>
+  </div>
+  <!--hbs end-->
 ```

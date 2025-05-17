@@ -106,7 +106,7 @@ pm2 v4.2.1
 there is a port descrepancy - i need to detect the server name
 
 src/server.js
-```
+```js
 console.log(`[server.js] HOSTNAME`, HOSTNAME);
 console.log(`[server.js] os hostname`, os.hostname());
 console.log(`[server.js] SITE_SERVER`, SITE_SERVER);
@@ -114,7 +114,7 @@ console.log(`[server.js] BETA_PORT`, BETA_PORT);
 ```
 
 keys.js
-```
+```js
   // HOSTNAME: process.env.DOMAIN_NAME.split(".")[0],
   HOSTNAME: process.env.HOSTNAME,
 ```

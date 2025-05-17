@@ -109,11 +109,14 @@ module.exports = {
   ],
   module: {
     rules: [
-      { test: /\.js$/,
+      { 
+        // test: /\.js$/,
+        test: /\.(js|jsx)$/,
+        // test: /\.jsx$/,
         exclude: /node_modules/,
         loader: "babel-loader",
         query: {
-          presets: ['@babel/preset-env','@babel/react'],
+          presets: ['@babel/preset-env','@babel/preset-react'/*,'@babel/react'*/],
           plugins: [
             ["@babel/plugin-transform-runtime", {"regenerator": true,}],
             ["@babel/plugin-proposal-decorators", { "legacy": true }],
@@ -149,6 +152,9 @@ module.exports = {
       // },
       { test: /\.hbs$/, loader: "handlebars-loader" }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   }
 }//module
 

@@ -24,9 +24,9 @@
 <div class="{{promo_class}} d-flex align-items-center">
   {{#if promo.flyer.active}}
   <div class="banner-text-right wow fadeInRight flyer {{promo.flyer.class}}" data-depth="0.1">
-    {{else}}
-    <div class="banner-text-right wow fadeInRight" data-depth="0.1">
-      {{/if}}
+  {{else}}
+  <div class="banner-text-right wow fadeInRight" data-depth="0.1">
+  {{/if}}
       {{#if promo.flyer.active}}
       <div class="fly-box">
         {{!-- <img src="{{promo.flyer.img}}"> --}}
@@ -49,7 +49,7 @@
         {{/if}}
       </div>
       {{/if}}
-    </div>
+    </div>{{!-- this one belongs to both conditional divs above --}}
   </div>
   {{/if}}
-</div>
+{{!-- </div> there should be no trailing div here --}}

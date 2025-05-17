@@ -3,9 +3,17 @@ $mp:  !important;
 
 .Foot{
   .company-about{
-    @mixin small {text-align: center;}
-    @include media.mobile{ @include small;}
-    @include media.mini{ @include small;}
-    @include media.tablet{text-align: left;}
+    // @mixin small {text-align: center;}
+    // @include media.mobile{ @include small;}
+    // @include media.mini{ @include small;}
+    // @include media.tablet{text-align: left;}
+    text-align: center $mp;
+  }
+
+  .footer-social{
+    .list-unstyled{
+      display: flex;
+      justify-content: center;
+    }
   }
 }

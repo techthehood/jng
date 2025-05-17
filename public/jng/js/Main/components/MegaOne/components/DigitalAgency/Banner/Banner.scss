@@ -7,6 +7,7 @@ $mp: !important;
 .root{overflow: hidden; /*ISSUE: hack for swiper.js overflow issues (with my custom images)*/}
 .Banner{
   min-heigth: 550px;
+  // position: relative;// i don't need to fix this template
   .banner_inner{width: 100%;}
   .banner.parallax{
     background-image: unset $mp;

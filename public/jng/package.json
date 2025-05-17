@@ -5,8 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev2": "parcel ./js/index.js",
-    "dev": "webpack --mode development ./js/index.js",
-    "build": "webpack --mode production ./js/index.js",
+    "dev": "webpack --mode development ./js/index.jsx",
+    "build": "webpack --mode production ./js/index.jsx",
     "diff": "diff -u file1 file2 | sed -n '1,2d;/^[-+]/p'",
     "lesson": "webpack"
   },

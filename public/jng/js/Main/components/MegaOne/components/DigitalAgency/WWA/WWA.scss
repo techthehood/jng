@@ -200,6 +200,15 @@ $mp: !important;
   }
 }
 
+.WhoWeAre{
+  .svg_top{
+    @media only screen and (min-height: 700px) {
+      // affects everything taller than
+      // z-index: 200 $mp;// i don't have to fix this template
+    }
+  }
+}
+
 .WhatWeDo{
   &.white{
     #about-header-svg{

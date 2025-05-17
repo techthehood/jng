@@ -1,5 +1,5 @@
   console.log("[mainStore]");
-  import { makeObservable, observable, autorun, runInAction, action, computed, decorate, toJS } from 'mobx';
+  import { makeObservable, observable, autorun, runInAction, action, computed, toJS } from 'mobx';
   import axios from 'axios';
   // import { AUTH_SIGN_UP, AUTH_SIGN_OUT, AUTH_SIGN_IN, DASHBOARD_GET_DATA, AUTH_ERRORS } from './types';
   const { exists } = require('../tools/exists');
@@ -8,26 +8,41 @@
 
   class MainStore {
     constructor(jngservice) {
-      makeObservable(this);
+      makeObservable(this,{
+        item_data: observable,
+        active_form: observable,
+        preview_data: observable,
+        form_test: observable,
+        start_page: observable,
+        page: observable,
+        setData: action,
+        setPage: action,
+        resetPages: action,
+        setActiveForm: action,
+        reset: action,
+        setPreview: action,
+        toggleTest: action,
+        getItem: computed,
+      });
       this.jngService = jngservice;
     }// constructor
 
-    @observable item_data = { 
+    item_data = { 
       id: "", 
       opportunities: {}
     };// item_data doesn't need initial values
     
-    @observable active_form = "";
+    active_form = "";
 
-    @observable preview_data = {};
+    preview_data = {};
 
-    @observable form_test = false;
+    form_test = false;
 
-    @observable start_page = FSTART;//FSUCCESS;
-    @observable page = this.start_page;
+    start_page = FSTART;//FSUCCESS;
+    page = this.start_page;
 
 
-    @action setData = (property, value, test = false) => {
+    setData = (property, value, test = false) => {
       let target_obj = (test == false) ? this.item_data : this.test_data;
       let property_array = (property.includes(".")) ? property.split(".") : [property];
 
@@ -47,19 +62,19 @@
       // my other setData idea is to use root[property] = value
     }// setData
 
-    @action setPage = (page) => {
+    setPage = (page) => {
       this.page = page;
     }
 
-    @action resetPages = (params) => {
+    resetPages = (params) => {
       this.page = this.start_page;
     }
 
-    @action setActiveForm = (form) => {
+    setActiveForm = (form) => {
       this.active_form = form;
     }
 
-    @action reset = () => {
+    reset = () => {
       // this.item_data = { title_data: "" };
       // this.test_data = { img_url: "", extra: "" }
       // this.init = false;
@@ -67,11 +82,11 @@
       // this.restart = true;
     }
 
-    @action setPreview = (val) => {
+    setPreview = (val) => {
       this.preview_data = {...val};
     }
 
-    @action toggleTest = (test) => {
+    toggleTest = (test) => {
       if(typeof test == "undefined"){
         this.form_test = !this.form_test;
       }else{
@@ -84,7 +99,7 @@
       return toJS(tObj);
     }
 
-    @computed get getItem() {
+    get getItem() {
       return toJS(this.item_data);
     }
     

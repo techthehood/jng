@@ -19,7 +19,7 @@ const social = {
 const social_icons = [
   { link: "facebook-text-hvr", font_icon: "fab fa-facebook-f", href: "https://www.facebook.com/people/JobsNot-Guns-DC/100075073862586/" },
   { link: "twitter-text-hvr", font_icon: "fab fa-twitter", href: "https://twitter.com/jobsnotguns" },
-  { link: "linkedin-text-hvr", font_icon: "fab fa-linkedin-in", href: "javascript:void(0);" },
+  { link: "linkedin-text-hvr", font_icon: "fab fa-linkedin-in", href: "#" },// href: "javascript:void(0);" 
   { link: "instagrams-text-hvr", font_icon: "lni lni-instagram-filled", href: "https://www.instagram.com/jobsnotgunsdc/" },
 ];
 
@@ -438,7 +438,7 @@ export const main_data = {
           active: false,
           img: `${ec_use_path}jng/MegaOne/digital-agency/img/avatar-1.png`,
           name: "Hena Sword",
-          href: "javascript:void(0);",
+          href: "#", // "javascript:void(0);",
         },
       },
       {
@@ -454,7 +454,7 @@ export const main_data = {
           active: false,
           img: `${ec_use_path}jng/MegaOne/digital-agency/img/avatar-1.png`,
           name: "David Villas",
-          href: "javascript:void(0);",
+          href: "#", // "javascript:void(0);",
         },
       },
       {
@@ -470,7 +470,7 @@ export const main_data = {
           active: false,
           img: `${ec_use_path}jng/MegaOne/digital-agency/img/avatar-1.png`,
           name: "Jhon Walker",
-          link: "javascript:void(0);",
+          link: "#", // "javascript:void(0);",
         },
       },
     ]
@@ -494,7 +494,7 @@ export const main_data = {
         button: {
           active: true,
           text: "",
-          href: "javascript:void(0);",
+          href: "#", // "javascript:void(0);",
         },
         img: `${ec_use_path}jng/MegaOne/digital-agency/img/blog-mokup-img-2.png`,
         target: "_SELF",

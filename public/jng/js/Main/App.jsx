@@ -88,6 +88,8 @@ const App = () => {
 
 
     console.log(`[App] axios`, axios);
+    if(1) console.log(`[App.jsx] running`);
+    if(1) debugger;
 
     return () => {
       // cleanup

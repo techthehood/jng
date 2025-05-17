@@ -86,6 +86,9 @@ $mp: !important;
       flex-flow: column;
       grid-area: text;
       gap: 2rem;
+      // color: white;
+      color: black;
+      z-index: 1;
       h1, h3, p {margin-bottom: unset;}
       // padding: 3rem;
       @mixin small {
@@ -96,10 +99,6 @@ $mp: !important;
       @include media.mini{ @include small; }
       @include media.tablet{padding: 22% 8% 8%; p{font-size: .6rem;}}
       @include media.laptop{ padding: 18% 8% 8%;}
-      // color: white;
-      color: black;
-      grid-area: text;
-      z-index: 1;
       h3{
         color: var(--main-secondary-color);
       }

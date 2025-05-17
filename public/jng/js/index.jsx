@@ -9,7 +9,7 @@ import App from './Main/App.jsx';
 
 import Events from './Events';
 import ErrorBoundary from './Error/Error';
-import { NOV_EVT_PATH, MAIN_PATH, EVENTS_PATH, CONFIRM_PATH, ARTICLE_PATH, CDN_PATH } from './paths/'
+import { NOV_EVT_PATH, MAIN_PATH, EVENTS_PATH, CONFIRM_PATH, ARTICLE_PATH, CDN_PATH, FOUR_OH_FOUR } from './paths/'
 import MainMenu from './elements/MainMenu';
 import Confirm from './Events/Confirm';
 import Articles from './elements/Articles/Articles';
@@ -39,6 +39,9 @@ window.addEventListener("DOMContentLoaded", () => {
   //   console.log(`[jng][index.js] monument`, monument);
   // }
 
+  if(1) console.log(`[index.jsx] running`);
+  if(1) debugger;
+
   const inner = (
     <ErrorBoundary>
       <Router>
@@ -48,6 +51,8 @@ window.addEventListener("DOMContentLoaded", () => {
         <Route exact path={EVENTS_PATH} render={(props) => (<MainMenu {...props}><Events /></MainMenu>)} />
         <Route exact path={CONFIRM_PATH} render={(props) => (<MainMenu {...props} tag="Confirm" ><Confirm /></MainMenu>)} />
         <Route exact path={ARTICLE_PATH} render={(props) => (<MainMenu {...props} fixed={true} tag="Article" ><Articles {...props} /></MainMenu>)} />
+        <Route path={FOUR_OH_FOUR} render={(props) => (<App />)}  />
+        {/* <Route path={FOUR_OH_FOUR} component={Four04} /> */}
         {/* i need a 404 page */}
       </Router>
     </ErrorBoundary>

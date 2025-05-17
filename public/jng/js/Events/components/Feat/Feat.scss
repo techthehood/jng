@@ -28,14 +28,14 @@ $mp: !important;
       flex-flow: column;
       gap: 2rem;
       // padding: 3rem;
+      color: white;
+      grid-area: text;
+      z-index: 1;
       @mixin small {padding: 30% 8% 8%;}
       @include media.smartphone{ @include small; }
       // @include media.mini{ @include small; }
       @include media.mini{padding: 22% 8% 8%;}
       @include media.laptop{padding: 18% 8% 8%;}
-      color: white;
-      grid-area: text;
-      z-index: 1;
       h1{
         color: white;
         font-size: 2rem;
